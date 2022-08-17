@@ -1,5 +1,6 @@
 import os
 from transformers import pipeline, set_seed
+import torch
 os.environ["CUDA_VISIBLE_DEVICES"] = "0,1,2,3,4,5,6,7"
 set_seed(32)
 device = torch.device("cuda:2")
