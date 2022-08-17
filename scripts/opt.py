@@ -1,10 +1,12 @@
 import os
 from transformers import pipeline, set_seed
 import torch
+import pdb
 os.environ["CUDA_VISIBLE_DEVICES"] = "0,1,2,3,4,5,6,7"
 set_seed(32)
 device = torch.device("cuda:2")
-generator = pipeline('text-generation', model="facebook/opt-1.3b", do_sample=True).to(device)
+generator = pipeline('text-generation', model="facebook/opt-1.3b", do_sample=True)
+pdb.set_trace()
 generator("Hello, I'm am conscious and")
 
 
