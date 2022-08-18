@@ -595,14 +595,6 @@ def main():
                 task=data_args.task_name, generations_file=data_args.generations_filepath,
                 explanation_sep=data_args.explanation_sep,
                 save_path=save_path)
-            if model_args.use_gpt3:
-                # get gpt3 predictions and write them to `data_args.generations_filepath` then pass it to `evaluate`
-                data_args.generations_filepath = os.path.join(save_path, "bloom_test_generations.txt")
-                gpt3.run_bloom(
-                    train_data=data_splits["train"], test_data=original_data_splits["test"],
-                    task=data_args.task_name, generations_file=data_args.generations_filepath,
-                    explanation_sep=data_args.explanation_sep,
-                    save_path=save_path)
 
         if data_args.generations_filepath is not None:
             assert "test" in data_args.generations_filepath
@@ -627,14 +619,6 @@ def main():
             # get gpt3 predictions and write them to `data_args.generations_filepath` then pass it to `evaluate`
             data_args.generations_filepath = os.path.join(save_path, "gpt3_validation_generations.txt")
             gpt3.run_gpt3(
-                train_data=data_splits["train"], test_data=original_data_splits["validation"],
-                task=data_args.task_name, generations_file=data_args.generations_filepath,
-                explanation_sep=data_args.explanation_sep,
-                save_path=save_path)
-        if model_args.use_bloom:
-            # get gpt3 predictions and write them to `data_args.generations_filepath` then pass it to `evaluate`
-            data_args.generations_filepath = os.path.join(save_path, "bloom_validation_generations.txt")
-            gpt3.run_bloom(
                 train_data=data_splits["train"], test_data=original_data_splits["validation"],
                 task=data_args.task_name, generations_file=data_args.generations_filepath,
                 explanation_sep=data_args.explanation_sep,

@@ -88,12 +88,6 @@ class ModelArguments:
             "help": "Ignore the HF model and use gpt3. Uses the `--generations_filepath` to name a file for gpt3 predictions."
         },
     )
-    use_bloom: bool = field(
-        default=False,
-        metadata={
-            "help": "Ignore the HF model and use bloom. Uses the `--generations_filepath` to name a file for bloom predictions."
-        },
-    )
 
 
 @dataclass

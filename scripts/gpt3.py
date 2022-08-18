@@ -121,14 +121,25 @@ def run_gpt3(train_data, test_data, task, generations_file, explanation_sep, sav
                 header = header + train_instance_input + train_instance_output
                 current_seqlen += train_instance_seqlen
 
+            # prompt = f'{header}{test_instance_input}'
+            # output_num_tokens.append(len(tokenizer.tokenize(test_instance_output)))
+            # total_num_tokens.append(len(tokenizer.tokenize(prompt)) + max_output_tokens)
+
+            # # Number of training examples, prompt sequence length, input, gold output
+            # print(f'{i}-{current_seqlen}-{test_instance_input}{test_instance_output}')
+            # response = openai.Completion.create(engine=gpt3_version, prompt=prompt, max_tokens=max_output_tokens, temperature=0.0)
+            # response_text = response['choices'][0]['text']
+            # print(response_text)  # predicted output
             prompt = f'{header}{test_instance_input}'
+            url_prompt=upa.urlencode({'input_text':prompt, 'max_length':max_output_tokens})
+            url_bloom="http://192.168.190.62:6605/predict?{}&do_sample=No".format(url_prompt)
             output_num_tokens.append(len(tokenizer.tokenize(test_instance_output)))
             total_num_tokens.append(len(tokenizer.tokenize(prompt)) + max_output_tokens)
 
             # Number of training examples, prompt sequence length, input, gold output
             print(f'{i}-{current_seqlen}-{test_instance_input}{test_instance_output}')
-            response = openai.Completion.create(engine=gpt3_version, prompt=prompt, max_tokens=max_output_tokens, temperature=0.0)
-            response_text = response['choices'][0]['text']
+            response = os.system("curl {}".format(url_bloom))#openai.Completion.create(engine=gpt3_version, prompt=prompt, max_tokens=max_output_tokens, temperature=0.0)
+            response_text = response['generated_text']#['choices'][0]['text']
             print(response_text)  # predicted output
             with open(os.path.join(gpt3_log_dir, f'{j}.txt'), 'w') as flog:
                 flog.write(prompt)
