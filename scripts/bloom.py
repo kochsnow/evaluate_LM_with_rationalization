@@ -143,7 +143,7 @@ def run_bloom(train_data, test_data, task, generations_file, explanation_sep, sa
             # Number of training examples, prompt sequence length, input, gold output
             print(f'{i}-{current_seqlen}-{test_instance_input}{test_instance_output}')
             response = os.system("curl {}".format(url_bloom))#openai.Completion.create(engine=gpt3_version, prompt=prompt, max_tokens=max_output_tokens, temperature=0.0)
-            response_text = response#['choices'][0]['text']
+            response_text = response['generated_text']#['choices'][0]['text']
             print(response_text)  # predicted output
             with open(os.path.join(gpt3_log_dir, f'{j}.txt'), 'w') as flog:
                 flog.write(prompt)
