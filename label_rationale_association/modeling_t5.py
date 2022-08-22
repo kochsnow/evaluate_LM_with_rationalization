@@ -966,11 +966,11 @@ T5_INPUTS_DOCSTRING = r"""
 """
 
 
-@add_start_docstrings(
-    "The bare T5 Model transformer outputting raw hidden-states"
-    "without any specific head on top.",
-    T5_START_DOCSTRING,
-)
+# @add_start_docstrings(
+#     "The bare T5 Model transformer outputting raw hidden-states"
+#     "without any specific head on top.",
+#     T5_START_DOCSTRING,
+# )
 class T5Model(T5PreTrainedModel):
     def __init__(self, config):
         super().__init__(config)
@@ -1007,7 +1007,7 @@ class T5Model(T5PreTrainedModel):
         for layer, heads in heads_to_prune.items():
             self.encoder.layer[layer].attention.prune_heads(heads)
 
-    @add_start_docstrings_to_callable(T5_INPUTS_DOCSTRING)
+    # @add_start_docstrings_to_callable(T5_INPUTS_DOCSTRING)
     def forward(
         self,
         input_ids=None,
@@ -1131,7 +1131,7 @@ class T5ForConditionalGeneration(T5PreTrainedModel):
     def get_decoder(self):
         return self.decoder
 
-    @add_start_docstrings_to_callable(T5_INPUTS_DOCSTRING)
+    # @add_start_docstrings_to_callable(T5_INPUTS_DOCSTRING)
     def forward(
         self,
         noisy,
