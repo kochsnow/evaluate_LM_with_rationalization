@@ -394,7 +394,7 @@ class Trainer:
         model.train()
         for k, v in inputs.items():
             inputs[k] = v.to(self.args.device)
-
+        pdb.set_trace()
         outputs = model(**inputs)
         # model outputs are a tuple
         loss = outputs[0]
