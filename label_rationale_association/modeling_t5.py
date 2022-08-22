@@ -35,7 +35,7 @@ from transformers.file_utils import (
     DUMMY_INPUTS,
     DUMMY_MASK,
     add_start_docstrings,
-    add_start_docstrings_to_callable,
+
 )
 from transformers.modeling_utils import PreTrainedModel, prune_linear_layer
 
