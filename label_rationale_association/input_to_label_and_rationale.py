@@ -44,8 +44,20 @@ logger = logging.getLogger(__name__)
 
 class SequenceCollator:
     def __init__(self, pad_token):
+        # self.pad_token_mapping = {
+        #     "lm_labels": -100,
+        #     "attention_mask": 0,
+        #     "decoder_attention_mask": 0,
+        #     "input_ids": pad_token,
+        # }
+        # self.columns = [
+        #     "input_ids",
+        #     "attention_mask",
+        #     "lm_labels",
+        #     "decoder_attention_mask",
+        # ]
         self.pad_token_mapping = {
-            "lm_labels": -100,
+            "labels": -100,
             "attention_mask": 0,
             "decoder_attention_mask": 0,
             "input_ids": pad_token,
@@ -53,7 +65,7 @@ class SequenceCollator:
         self.columns = [
             "input_ids",
             "attention_mask",
-            "lm_labels",
+            "labels",
             "decoder_attention_mask",
         ]
 

@@ -521,7 +521,8 @@ class Trainer:
         model.eval()
 
         for inputs in tqdm(dataloader, desc=description):
-            has_labels = inputs.get("lm_labels") is not None
+            # has_labels = inputs.get("lm_labels") is not None
+            has_labels = inputs.get("labels") is not None
 
             for k, v in inputs.items():
                 inputs[k] = v.to(self.args.device)
@@ -539,13 +540,20 @@ class Trainer:
                     preds = logits.detach()
                 else:
                     preds = torch.cat((preds, logits.detach()), dim=0)
-                if inputs.get("lm_labels") is not None:
+                if inputs.get("labels") is not None:
                     if label_ids is None:
-                        label_ids = inputs["lm_labels"].detach()
+                        label_ids = inputs["labels"].detach()
                     else:
                         label_ids = torch.cat(
-                            (label_ids, inputs["lm_labels"].detach()), dim=0
+                            (label_ids, inputs["labels"].detach()), dim=0
                         )
+                # if inputs.get("lm_labels") is not None:
+                #     if label_ids is None:
+                #         label_ids = inputs["lm_labels"].detach()
+                #     else:
+                #         label_ids = torch.cat(
+                #             (label_ids, inputs["lm_labels"].detach()), dim=0
+                #         )
 
         # Finally, turn the aggregated tensors into numpy arrays.
         if preds is not None:

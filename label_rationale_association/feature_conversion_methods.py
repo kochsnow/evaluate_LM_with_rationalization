@@ -57,7 +57,8 @@ def cose_explanation_to_label(
         return_attention_mask=True,
     )
 
-    encodings["lm_labels"] = dec["input_ids"]
+    # encodings["lm_labels"] = dec["input_ids"]
+    encodings["labels"] = dec["input_ids"]
     encodings["decoder_attention_mask"] = dec["attention_mask"]
 
     encodings["question_encoding"] = encodings["input_ids"]
@@ -115,7 +116,8 @@ def esnli_explanation_to_label(
         return_attention_mask=True,
     )
 
-    encodings["lm_labels"] = dec["input_ids"]
+    # encodings["lm_labels"] = dec["input_ids"]
+    encodings["labels"] = dec["input_ids"]
     encodings["decoder_attention_mask"] = dec["attention_mask"]
 
     encodings["question_encoding"] = encodings["input_ids"]
@@ -164,7 +166,8 @@ def input_to_explanation_plus_label(
         return_attention_mask=True,
     )
 
-    encodings["lm_labels"] = dec["input_ids"]
+    # encodings["lm_labels"] = dec["input_ids"]
+    encodings["labels"] = dec["input_ids"]
     encodings["decoder_attention_mask"] = dec["attention_mask"]
 
     encodings["question_encoding"] = encodings["input_ids"]
