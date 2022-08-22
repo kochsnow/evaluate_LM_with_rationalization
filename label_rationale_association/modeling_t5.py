@@ -29,7 +29,8 @@ import torch.nn.functional as F
 from torch import nn
 from torch.nn import CrossEntropyLoss
 
-from transformers.configuration_t5 import T5Config
+# from transformers.configuration_t5 import T5Config
+from transformers.models.t5.configuration_t5 import T5Config
 from transformers.file_utils import (
     DUMMY_INPUTS,
     DUMMY_MASK,
