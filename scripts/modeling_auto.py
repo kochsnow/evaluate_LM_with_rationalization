@@ -31,7 +31,7 @@ from transformers.models.albert.modeling_albert import (
     AlbertModel,
 )
 # Instead of loading the BART from the transformers==4.9.1, we choose to load from our own prefix-tuning version.
-from .modeling_bart import (
+from modeling_bart import (
     BartForConditionalGeneration,
     BartModel,
 )
