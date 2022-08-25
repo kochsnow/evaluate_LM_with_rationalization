@@ -271,7 +271,7 @@ from transformers.models.squeezebert.modeling_squeezebert import (
     SqueezeBertModel,
 )
 # Instead of loading the T5 from the transformers==4.9.1, we choose to load from our prefix-tuning version.
-from .modeling_t5 import T5ForConditionalGeneration, T5Model
+from modeling_t5 import T5ForConditionalGeneration, T5Model
 from transformers.models.tapas.modeling_tapas import (
     TapasForMaskedLM,
     TapasForQuestionAnswering,
