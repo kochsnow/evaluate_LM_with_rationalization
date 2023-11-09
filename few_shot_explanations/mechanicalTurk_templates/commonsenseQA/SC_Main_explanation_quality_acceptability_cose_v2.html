@@ -280,31 +280,35 @@
                             <ul> <li><b>(1, Nonsensical Facts)</b>: Being nonsensical and devoid
                                 of any significance to support the reasoning process or the explanation.
 
-                               <br>For example, <b>explanation</b>  <span style="color:#6e01eb;">"mouse wiki."</span> 
+                               <br><b>For example, explanation</b>  <span style="color:#6e01eb;">"mouse wiki."</span> 
                                contains nonsenical and chaotic facts.</li>
+
                                 <li><b>(2, Irrelevant or Erroneous Facts)</b>: Providing domain knowledge to 
                                     support the reasoning process can be irrelevant or erroneous. 
-                                    For example, <b>explanation</b> "<span style="color:#eb1101;">Fact0{mouse does not like cheese}</span>, 
+
+                                    <br><b>For example, explanation</b> "<span style="color:#eb1101;">Fact0{mouse does not like cheese}</span>, 
                                     hence it is not dangerous for mice" contains erroneous fact 
                                     <span style="color:#eb1101;">Fact0</span>. </li> 
+
                                 <li><b>(3, Relevant but Insufficient Facts</b>): Providing domain knowledge that supports the reasoning process, 
                                     though it may be relevant but not precisely apt or insufficiently supported. 
                                     
-                                    <br>For example, <b>explanation</b> "<span style="color:#eb1101;">Fact0{it is often used as bait}</span>" 
+                                    <br><b>For example, explanation</b> "<span style="color:#eb1101;">Fact0{it is often used as bait}</span>" 
                                     give basic facts <span style="color:#eb1101;">Fact0</span> supporting this reasoning process but 
                                     without more detail facts.</li>
+
                                 <li><b>(4, Succinct yet Precise Facts)</b>: Providing succinct yet precise domain knowledge to
                                     support the reasoning process. 
                                     
-                                    <br>For example, 
-                                    <b>explanation</b> "<span style="color:#eb1101;">Fact0 :{cheese has been said to attract mice.}</span> 
+                                    <br><b>For example, explanation</b> "<span style="color:#eb1101;">Fact0 :{cheese has been said to attract mice.}</span> 
                                     <span style="color:#5b01eb;">Fact1:{Mice traps may contain cheese}</span> in order to attract them."
                                     contains precise facts <span style="color:#eb1101;">Fact0</span> and <span style="color:#5b01eb;">Fact1</span> 
                                     well suporting reasoning process from the qeustion to answer.</li>
+
                                 <li><b>(5, Sufficient yet Precise Facts)</b>: Providing domain knowledge that is both sufficient and
                                     accurately relevant to support the reasoning process. 
                                     
-                                    <br>For example, <b>explanation</b> "<span style="color:#eb1101;">Fact0:{Cheese is used as bait}</span> to 
+                                    <br><b>For example, explanation</b> "<span style="color:#eb1101;">Fact0:{Cheese is used as bait}</span> to 
                                     <span style="color:#5b01eb;">Fact1:{lure small creatures, like mice}</span>, to a mouse trap. 
                                     In this context, <span style="color:#eb1101;">Fact2:{cheese is dangerous for the mice}</span>, as
                                         <span style="color:#5b01eb;">Fact3:{its presence would indicate the presence of a
@@ -322,27 +326,30 @@
                             <li> <b>5-Tier Reasoning Structure Scoring System</b>
                             <ul> <li><b>(1, Chaotic Structure)</b>: The reasoning process provided is chaotic and
                                 meaningless, lacking any trace of applied reasoning skills. 
-                                
-                                <br>For example, <b>explanation</b> <span style="color:#6e01eb;">"mouse wiki."</span> 
+                                <br><b>For example, explanation</b> <span style="color:#6e01eb;">"mouse wiki."</span> 
                                 does not dmemonstrate any reasoning structure or skill.</li>
+
                                 <li><b>(2, Elementary Structure)</b>: The system only provides a statement, and the
                                     subsequent inference process needs to be supplemented by individual cognitive reasoning, 
-                                    which belongs to default reasoning or one-step reasoning. For example, <b>explanation</b> 
+                                    which belongs to default reasoning or one-step reasoning. 
+                                <br><b>For example, explanation</b> 
                                     <span style="color:#6e01eb;">"S0:{it is often used as bait}"</span> 
                                     demonstrates one-step reasoning expressed as one statement. </li>
+
                                 <li><b>(3, Simple Structure)</b>: Upon making a statement, subsequent inferences are made. However, the reasoning
                                     chain seems somewhat rough, including missing or more detailed links in the reasoning chain. 
                                     
-                                    <br>For example, <b>explanation</b> "<span style="color:#6e01eb;">S0:{Cheese has been said to attract mice}</span>. 
+                                    <br><b>For example, explanation</b> "<span style="color:#6e01eb;">S0:{Cheese has been said to attract mice}</span>. 
                                     <span style="color:#eb1101;">S1:{Mouse traps may
                                         contain cheese in order to attract them.}</span>" demonstrated as 
                                         two-step reasoning consisiting of <span style="color:#6e01eb;">S0</span> 
                                         and <span style="color:#eb1101;">S1</span>.
                                     </li>
+
                                 <li><b>(4, Comprehensive Structure)</b>: A more comprehensive and sufficient reasoning process is provided, wherein detailed
                                     reasoning steps exist within broader reasoning segments. 
                                     
-                                    <br>For example, <b>explanation</b> 
+                                    <br><b>For example, explanation</b> 
                                     "<span style="color:#6e01eb;">S0:{<span style="color:#eb1101;">s00:{Cheese is utilized as a lure}</span> 
                                     s01:{to attract diminutive creatures, such as mice, into a mousetrap.}}</span> 
                                     In this particular context, 
@@ -357,11 +364,12 @@
                                     <span style="color:#eb1101;">s00</span> and <span style="color:#6e01eb;">s01</span>, and 
                                     <span style="color:#eb1101;">S1</span> is composed of 
                                     <span style="color:#6e01eb;">s10</span> and <span style="color:#eb1101;">s11</span>.</li>
+
                                 <li><b>(5, Comprehensive With Exception Structure)</b>: The reasoning process is more comprehensive and detailed, 
                                     incorporating finer reasoning within the larger reasoning steps, and taking into account exceptions or discussing different
                                     scenarios, thus displaying the comprehensiveness of the reasoning. 
                                     
-                                    <br>For example, <b>explanation</b> "<span style="color:#6e01eb;">S0:{Mouse traps are designed to trap and kill mice}</span>, and
+                                    <br><b>For example, explanation</b> "<span style="color:#6e01eb;">S0:{Mouse traps are designed to trap and kill mice}</span>, and
                                     <span style="color:#eb1101;">S1:{<span style="color:#6e01eb;">s10:{since cheese is a common bait for mouse traps,}</span> 
                                     s11:{it poses a danger to mice who might try to eat it.}}</span> 
                                     However, <b>exception</b> <span style="color:#6e01eb;">S2:{
