@@ -251,6 +251,14 @@
 
                             <b><p class="mb-2">You will read multiple-choice questions about daily life. For each question, an answer has been selected and 9 explanations for the answer have been given. <br><br>
                                 Your task is to judge score each explanation in term of reasoning facts and reasoning structure in two-stage way</b></p>
+                                <br>
+                                <p class="mb-2" style="margin-left: 40px"><b>Each HIT contains 3 parts:</b>
+                                <div class="legend" style="margin-left: 40px">
+                                    <div class="row"><span class="label col-3"><span class="concept_a">Question</span></span><span class="col-9">A question such as "If a lantern is not for sale, where is it likely to be?"</span></div>
+                                    <div class="row"><span class="label col-3"><span class="concept_c">Answer</span></span><span class="col-9">A selected answer, such as "house" (may or may not be correct).</span></div>
+                                    <div class="row"><span class="label col-3"><span class="concept_d">Explanations</span></span><span class="col-9">Nive explanations for the <span class="concept_c">Answer</span>.</span></div>
+                                </div></p>
+
                             <p> <b>In the first stage</b>, you will need to initially score each explanation in term of reasoning facts and reasoning structure via five-tier scoring schema as the following:</p>
                                 <li><b>Reasoning Facts</b>:  Regarding quantity and quality of facts support reasoning, our reasoning facts scoring system prioritizes quality over quantity 
                                     and is scored from 1 to 5 including Nonsensical Facts, Irrelevant or Erroneous Facts, Relevant but Insufficient Facts, Succinct yet Precise Facts and Sufficient and Precise Facts.</li>
@@ -259,34 +267,28 @@
                             <p> <b>In the second stage</b>, you will need to refine your score subsequent to initial scoring, annotators refine scores through pairwise comparisons of explanations with identical initial scores. 
                                     Specifically when explanation E1 is considered superior to explanation E2 concerning reasoning structure or facts, the score of E1 is incremented by 0.5 in the pertinent aspect.</p>
                                     
-                            <br>
-                            <p class="mb-2" style="margin-left: 40px"><b>Each HIT contains 3 parts:</b>
-                            <div class="legend" style="margin-left: 40px">
-                                <div class="row"><span class="label col-3"><span class="concept_a">Question</span></span><span class="col-9">A question such as "If a lantern is not for sale, where is it likely to be?"</span></div>
-                                <div class="row"><span class="label col-3"><span class="concept_c">Answer</span></span><span class="col-9">A selected answer, such as "house" (may or may not be correct).</span></div>
-                                <div class="row"><span class="label col-3"><span class="concept_d">Explanations</span></span><span class="col-9">Nive explanations for the <span class="concept_c">Answer</span>.</span></div>
-                            </div></p>
+                            
 
 
-                        <p> Annotation Instructions:</p>
+                        <p> <b>Annotation Instructions:</b> </p>
                         <ul>
                             <!-- 5-Tier Reasoning Facts Scoring System. The system captures reasoning
                             facts, illustrated with the question “Where is cheese likely to be dangerous for some creatures?” answered by
                             “mouse trap”. Fact represents irrelevant or erroneous fact; Fact represents precise fact; Fact represents nonsensical
                             fact.  -->
                             <!-- <span style="color:#3401eb;">New!</span> -->
-                            <li> 5-Tier Reasoning Facts Scoring System
+                            <li> <b>5-Tier Reasoning Facts Scoring System</b>
                                  <!-- illustrated with the question “Where is cheese likely to be dangerous for some creatures?” answered by “mouse trap”. -->
-                            <ul> <li>(1, Nonsensical Facts): mean that are nonsensical and devoid
+                            <ul> <li><b>(1, Nonsensical Facts)</b>: Being nonsensical and devoid
                                 of any significance to support the reasoning process or the explanation.
                                 For example, "mouse wiki.".</li>
-                                <li>(2, Irrelevant or Erroneous Facts): Providing domain knowledge to 
+                                <li><b>(2, Irrelevant or Erroneous Facts)</b>: Providing domain knowledge to 
                                     support the reasoning process can be irrelevant or erroneous.</li> 
-                                <li>(3, Relevant but Insufficient Facts): Provide domain knowledge that supports the reasoning process, 
+                                <li><b>(3, Relevant but Insufficient Facts</b>): Providing domain knowledge that supports the reasoning process, 
                                     though it may be relevant but not precisely apt or insufficiently supported.</li>
-                                <li>(4, Succinct yet Precise Facts): Provide succinct yet precise domain knowledge to
+                                <li><b>(4, Succinct yet Precise Facts)</b>: Providing succinct yet precise domain knowledge to
                                     support the reasoning process.</li>
-                                <li>(5, Sufficient yet Precise Facts): Provide domain knowledge that is both sufficient and
+                                <li><b>(5, Sufficient yet Precise Facts)</b>: Providing domain knowledge that is both sufficient and
                                     accurately relevant to support the reasoning process. </li>
                                 <!-- <li>You may disagree with the <span class="concept_c">Answer</span>, but you should pretend it is correct when judging the <span class="concept_d">Explanations</span>.</li>
                                 <li>Some sentences have minor grammar and spelling mistakes, don't end on a period, or cut off partway through because they are long. Please ignore these, and judge on the part of the sentence that is presented.</li>
@@ -294,17 +296,17 @@
                             
                             </ul></li>
 
-                            <li> 5-Tier Reasoning Structure Scoring System
-                            <ul> <li>(1, Chaotic Structure): The reasoning process provided is chaotic and
+                            <li> <b>5-Tier Reasoning Structure Scoring System</b>
+                            <ul> <li><b>(1, Chaotic Structure)</b>: The reasoning process provided is chaotic and
                                 meaningless, lacking any trace of applied reasoning skills. </li>
-                                <li>(2, Elementary Structure): The system only provides a statement, and the
+                                <li><b>(2, Elementary Structure)</b>: The system only provides a statement, and the
                                     subsequent inference process needs to be supplemented by individual cognitive reasoning, 
                                     which belongs to default reasoning or one-step reasoning. </li>
-                                <li>(3, Simple Structure): Upon making a statement, subsequent inferences are made. However, the reasoning
+                                <li><b>(3, Simple Structure)</b>: Upon making a statement, subsequent inferences are made. However, the reasoning
                                     chain seems somewhat rough, including missing or more detailed links in the reasoning chain. </li>
-                                <li>(4, Comprehensive Structure): A more comprehensive and sufficient reasoning process is provided, wherein detailed
+                                <li><b>(4, Comprehensive Structure)</b>: A more comprehensive and sufficient reasoning process is provided, wherein detailed
                                     reasoning steps exist within broader reasoning segments. </li>
-                                <li>(5, Comprehensive With Exception Structure): The reasoning process is more comprehensive and detailed, 
+                                <li><b>(5, Comprehensive With Exception Structure)</b>: The reasoning process is more comprehensive and detailed, 
                                     incorporating finer reasoning within the larger reasoning steps, and taking into account exceptions or discussing different
                                     scenarios, thus displaying the comprehensiveness of the reasoning. </li>
                                 <!-- <li>You may disagree with the <span class="concept_c">Answer</span>, but you should pretend it is correct when judging the <span class="concept_d">Explanations</span>.</li>
