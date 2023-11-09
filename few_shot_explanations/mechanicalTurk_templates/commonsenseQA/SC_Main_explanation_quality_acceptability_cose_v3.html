@@ -1,0 +1,2288 @@
+<html lang="en">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta http-equiv='Content-Type' content='text/html; charset=UTF-8' />
+<script type='text/javascript' src='https://s3.amazonaws.com/mturk-public/externalHIT_v1.js'></script>
+
+<!-- BOOTSTRAP CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+<!-- HITPUB CSS -->
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i" rel="stylesheet">
+<style id="hitpub_css">
+    /***********************************************
+        MOSAIC BOOSTRAP OVERWRITES
+        ***********************************************/
+    #hitinfo .card {
+        border-radius: 0;
+    }
+
+    #hitinfo button.btn-link {
+        color: #fff;
+        text-decoration: none;
+    }
+
+
+    #hitinfo button.btn-link:hover {
+        text-decoration: none;
+    }
+
+    #hit ul.question-choice {
+        list-style-type: none;
+    }
+
+    /***********************************************
+        MOSAIC GENERAL STYLING
+        ***********************************************/
+    body {
+        font-family: "Open Sans", "Roboto", sans-serif;
+        line-height: 1.25;
+    }
+
+    textarea#feedback {
+        width: 100%
+    }
+
+    input#submitButton {
+        margin: auto;
+        display: block;
+        background-color: #2172a4;
+        color: #fff;
+        font-size: 1.125rem;
+        padding: .5rem 1rem;
+        cursor: pointer;
+        border-radius: 1rem;
+    }
+
+    input#submitButton:hover {
+        background-color: #06486F;
+    }
+
+    input[type="radio"] {
+        cursor: pointer;
+    }
+
+    div.goal-category {
+        border-bottom: solid 1px #ccc;
+        padding: 1rem 1rem;
+    }
+
+    li {
+        margin: 0.6em;
+    }
+
+    table {
+        width: 80%;
+        margin: 5px;
+    }
+
+    tr {
+        border: 1px solid #ccc;
+    }
+
+    th {
+        width: 20%;
+        background-color: #fff;
+        font-weight: normal;
+        text-align: center;
+        padding: 0.5em;
+    }
+
+
+    td {
+        padding-left: 20px;
+        padding-right: 10px;
+    }
+
+
+
+
+    /***********************************************
+        HIT CUSTOM GENERAL STYLING
+        ***********************************************/
+    div.card-header {
+        background-color: #06486F;
+    }
+
+    div.card-header h5 {
+        color: #fff !important;
+    }
+
+
+    .question-choice-container label.btn {
+        background-color: #eee;
+        border: #ccc 1px solid;
+        margin-left: 0 !important;
+        color: black;
+    }
+
+
+    .legend {
+        margin-top: .33rem;
+        font-weight: normal;
+        padding-left: 40px;
+    }
+
+    .legend .label {
+        font-style: italic;
+    }
+
+    .emphasize {
+        font-weight: bold;
+        color: black;
+        font-style: italic;
+    }
+
+    .btn-group-container {
+        align: left;
+        padding: 0;
+    }
+
+    .example {
+        pointer-events: none;
+    }
+
+    .title {
+        font-style: italic;
+    }
+
+    .entity {
+        color: blue;
+        font-weight: bold;
+    }
+
+    .use {
+        color: purple;
+        font-weight: bold;
+    }
+
+    .btn-group-xs>.btn,
+    .btn-xs {
+        padding: .4rem .4rem;
+        font-size: .8rem;
+        line-height: 1.2;
+        border-radius: .2rem;
+    }
+
+    .card-body {
+        background-color: #fbfbfb;
+    }
+
+    .concept_a {
+        color: #0072B2;
+        font-weight: bold;
+        font-style: italic;
+    }
+
+    .concept_b {
+        color: #D55E00;
+        font-weight: bold;
+        font-style: italic;
+    }
+
+    .concept_c {
+        color: #aa00d5;
+        font-weight: bold;
+        font-style: italic;
+    }
+
+    .concept_d {
+        color: #008d4b;
+        font-weight: bold;
+        font-style: italic;
+    }
+
+    .sm-bold {
+        font-weight: bold;
+        font-style: italic;
+        font-size: 80%;
+    }
+
+    label[for="1"]:hover,
+    label[for="1"].active {
+        background-color: #30c8f7 !important;
+        color: black;
+    }
+
+    label[for="2"]:hover,
+    label[for="2"].active {
+        background-color: #f57023 !important;
+        color: black;
+    }
+
+    label[for="3"]:hover,
+    label[for="3"].active {
+        background-color: #ec58e0 !important;
+        color: black;
+    }
+
+    label[for="4"]:hover,
+    label[for="4"].active {
+        background-color: #f7f333 !important;
+        color: black;
+    }
+
+    label[for="5"]:hover,
+    label[for="5"].active {
+        background-color: #1aa531 !important;
+        color: black;
+    }
+
+    .one-background {
+        background-color: #30c8f7;
+    }
+
+    .two-background {
+        background-color: #f57023;
+    }
+
+    .three-background {
+        background-color: #ec58e0;
+    }
+
+    .four-background {
+        background-color: #f7f333;
+    }
+
+    .five-background {
+        background-color: #1aa531;
+    }
+
+    .form-check {
+        padding-left: 0;
+        font-size: 0.75rem;
+    }
+
+    .form-check-input {
+        margin-left: 0;
+        position: relative;
+    }
+</style>
+
+<!-- HIT START -->
+<div id="hit" class="container">
+
+    <!-- ACCORDION START -->
+    <div class="col-12 accordion" id="hitinfo">
+
+        <!-- INSTRUCTIONS START -->
+        <div class="card">
+            <div class="card-header" id="instructionsHeading">
+                <h5 class="mb-0">
+                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#instructions"
+                        aria-expanded="true" aria-controls="instructions">
+                        Instructions (click to expand/collapse)
+                    </button>
+                </h5>
+            </div>
+            <div class="collapse show" id="instructions" aria-labelledby="instructionsHeading" data-parent="#hitinfo">
+                <div class="card-body">
+                    <div class="card-content">
+                        <p>Thanks for participating in this HIT!</p>
+
+                        <b>
+                            <p class="mb-2">You will read multiple-choice questions about daily life. For each question,
+                                an answer has been selected and 9 explanations for the answer have been given. <br><br>
+                                Your task is to judge score each explanation in term of reasoning facts and reasoning
+                                structure in two-stage way
+                        </b></p>
+                        <br>
+                        <p class="mb-2" style="margin-left: 40px"><b>Each HIT contains 3 parts:</b>
+                        <div class="legend" style="margin-left: 40px">
+                            <div class="row"><span class="label col-3"><span
+                                        class="concept_a">Question</span></span><span class="col-9">A question such as
+                                    "If a lantern is not for sale, where is it likely to be?"</span></div>
+                            <div class="row"><span class="label col-3"><span class="concept_c">Answer</span></span><span
+                                    class="col-9">A selected answer, such as "house" (may or may not be correct).</span>
+                            </div>
+                            <div class="row"><span class="label col-3"><span
+                                        class="concept_d">Explanations</span></span><span class="col-9">Nive
+                                    explanations for the <span class="concept_c">Answer</span>.</span></div>
+                        </div>
+                        </p>
+
+                        <p> <b>In the first stage</b>, you will need to initially score each explanation in term of
+                            reasoning facts and reasoning structure via five-tier scoring schema as the following:</p>
+                        <li><b>Reasoning Facts</b>: Regarding quantity and quality of facts support reasoning, our
+                            reasoning facts scoring system prioritizes quality over quantity
+                            and is scored from 1 to 5 including Nonsensical Facts, Irrelevant or Erroneous Facts,
+                            Relevant but Insufficient Facts, Succinct yet Precise Facts and Sufficient and Precise
+                            Facts.</li>
+                        <li><b>Reasoning structure</b>: Regarding how well handles belief revisions in the face of
+                            conflicting information, our reasoning structure scoring system introduces a hierarchical
+                            system to manage complex structures
+                            and is scored from 1 to 5 including Chaotic Structure, Elementary Structure, Simple
+                            Structure, Comprehensive Structure, and Comprehensive with Exception Structure.</li>
+                        <p> <b>In the second stage</b>, you will need to refine your score subsequent to initial
+                            scoring, annotators refine scores through pairwise comparisons of explanations with
+                            identical initial scores.
+                            Specifically when explanation E1 is considered superior to explanation E2 concerning
+                            reasoning structure or facts, the score of E1 is incremented by 0.5 in the pertinent aspect.
+                        </p>
+
+                        <p> <b>Annotation Instructions:</b> </p>
+                        <ul> We will illustrate the following 5-Tier Reasoning Facts and Structure Scoring System with
+                            the <span style="color:#eb1101;"><b>question</b></span> "Where is cheese likely to be
+                            dangerous for some creatures?" <span style="color:#6e01eb;"><b>answered</b></span> by
+                            "mouse trap".
+                            <!-- 5-Tier Reasoning Facts Scoring System. The system captures reasoning
+                            facts, illustrated with the question “Where is cheese likely to be dangerous for some creatures?” answered by
+                            “mouse trap”. Fact represents irrelevant or erroneous fact; Fact represents precise fact; Fact represents nonsensical
+                            fact.  -->
+                            <!-- <span style="color:#3401eb;">New!</span> -->
+                            <li> <b>5-Tier Reasoning Facts Scoring System</b>
+                                <!-- illustrated with the question “Where is cheese likely to be dangerous for some creatures?” answered by “mouse trap”. -->
+                                <ul>
+                                    <li><b>(1, Nonsensical Facts)</b>: Being nonsensical and devoid
+                                        of any significance to support the reasoning process or the explanation.
+
+                                        <br><b>For example, explanation</b> <span style="color:#6e01eb;">"mouse
+                                            wiki."</span>
+                                        contains nonsenical and chaotic facts.
+                                    </li>
+
+                                    <li><b>(2, Irrelevant or Erroneous Facts)</b>: Providing domain knowledge to
+                                        support the reasoning process can be irrelevant or erroneous.
+
+                                        <br><b>For example, explanation</b> "<span style="color:#eb1101;">Fact0{mouse
+                                            does not like cheese}</span>,
+                                        hence it is not dangerous for mice" contains erroneous fact
+                                        <span style="color:#eb1101;">Fact0</span>.
+                                    </li>
+
+                                    <li><b>(3, Relevant but Insufficient Facts</b>): Providing domain knowledge that
+                                        supports the reasoning process,
+                                        though it may be relevant but not precisely apt or insufficiently supported.
+
+                                        <br><b>For example, explanation</b> "<span style="color:#eb1101;">Fact0{it is
+                                            often used as bait}</span>"
+                                        give basic facts <span style="color:#eb1101;">Fact0</span> supporting this
+                                        reasoning process but
+                                        without more detail facts.
+                                    </li>
+
+                                    <li><b>(4, Succinct yet Precise Facts)</b>: Providing succinct yet precise domain
+                                        knowledge to
+                                        support the reasoning process.
+
+                                        <br><b>For example, explanation</b> "<span style="color:#eb1101;">Fact0 :{cheese
+                                            has been said to attract mice.}</span>
+                                        <span style="color:#5b01eb;">Fact1:{Mice traps may contain cheese}</span> in
+                                        order to attract them."
+                                        contains precise facts <span style="color:#eb1101;">Fact0</span> and <span
+                                            style="color:#5b01eb;">Fact1</span>
+                                        well suporting reasoning process from the qeustion to answer.
+                                    </li>
+
+                                    <li><b>(5, Sufficient yet Precise Facts)</b>: Providing domain knowledge that is
+                                        both sufficient and
+                                        accurately relevant to support the reasoning process.
+
+                                        <br><b>For example, explanation</b> "<span style="color:#eb1101;">Fact0:{Cheese
+                                            is used as bait}</span> to
+                                        <span style="color:#5b01eb;">Fact1:{lure small creatures, like mice}</span>, to
+                                        a mouse trap.
+                                        In this context, <span style="color:#eb1101;">Fact2:{cheese is dangerous for the
+                                            mice}</span>, as
+                                        <span style="color:#5b01eb;">Fact3:{its presence would indicate the presence of
+                                            a
+                                            mouse trap.}</span>" contains sufficient and precise facts
+                                        <span style="color:#eb1101;">Fact0</span>,
+                                        <span style="color:#5b01eb;">Fact1</span>,
+                                        <span style="color:#eb1101;">Fact2</span>,
+                                        and <span style="color:#5b01eb;">Fact3</span>.
+                                    </li>
+                                    <!-- <li>You may disagree with the <span class="concept_c">Answer</span>, but you should pretend it is correct when judging the <span class="concept_d">Explanations</span>.</li>
+                                <li>Some sentences have minor grammar and spelling mistakes, don't end on a period, or cut off partway through because they are long. Please ignore these, and judge on the part of the sentence that is presented.</li>
+                                <li><span style="color:#eb1101;">New!</span> If at least <it>part</it> of the explanation is acceptable and sufficient (even if some other part is nonsensical or rambling), please mark is as acceptable.</li> -->
+
+                                </ul>
+                            </li>
+
+                            <li> <b>5-Tier Reasoning Structure Scoring System</b>
+                                <ul>
+                                    <li><b>(1, Chaotic Structure)</b>: The reasoning process provided is chaotic and
+                                        meaningless, lacking any trace of applied reasoning skills.
+                                        <br><b>For example, explanation</b> <span style="color:#6e01eb;">"mouse
+                                            wiki."</span>
+                                        does not dmemonstrate any reasoning structure or skill.
+                                    </li>
+
+                                    <li><b>(2, Elementary Structure)</b>: The system only provides a statement, and the
+                                        subsequent inference process needs to be supplemented by individual cognitive
+                                        reasoning,
+                                        which belongs to default reasoning or one-step reasoning.
+                                        <br><b>For example, explanation</b>
+                                        <span style="color:#6e01eb;">"S0:{it is often used as bait}"</span>
+                                        demonstrates one-step reasoning expressed as one statement.
+                                    </li>
+
+                                    <li><b>(3, Simple Structure)</b>: Upon making a statement, subsequent inferences are
+                                        made. However, the reasoning
+                                        chain seems somewhat rough, including missing or more detailed links in the
+                                        reasoning chain.
+
+                                        <br><b>For example, explanation</b> "<span style="color:#6e01eb;">S0:{Cheese has
+                                            been said to attract mice}</span>.
+                                        <span style="color:#eb1101;">S1:{Mouse traps may
+                                            contain cheese in order to attract them.}</span>" demonstrated as
+                                        two-step reasoning consisiting of <span style="color:#6e01eb;">S0</span>
+                                        and <span style="color:#eb1101;">S1</span>.
+                                    </li>
+
+                                    <li><b>(4, Comprehensive Structure)</b>: A more comprehensive and sufficient
+                                        reasoning process is provided, wherein detailed
+                                        reasoning steps exist within broader reasoning segments.
+
+                                        <br><b>For example, explanation</b>
+                                        "<span style="color:#6e01eb;">S0:{<span style="color:#eb1101;">s00:{Cheese is
+                                                utilized as a lure}</span>
+                                            s01:{to attract diminutive creatures, such as mice, into a
+                                            mousetrap.}}</span>
+                                        In this particular context,
+                                        <span style="color:#eb1101;">S1:{
+                                            <span style="color:#6e01eb;">s10:{cheese poses a danger to the mice,}</span>
+                                            as s11:{its presence tends to signify the existence of a
+                                            mousetrap.}}</span>"
+                                        consist of two-rough steps of
+                                        <span style="color:#6e01eb;">S0</span> and
+                                        <span style="color:#eb1101;">S1</span>,
+                                        and each of the rough step consist of two detail steps that
+                                        <span style="color:#6e01eb;">S0</span> is composed of
+                                        <span style="color:#eb1101;">s00</span> and <span
+                                            style="color:#6e01eb;">s01</span>, and
+                                        <span style="color:#eb1101;">S1</span> is composed of
+                                        <span style="color:#6e01eb;">s10</span> and <span
+                                            style="color:#eb1101;">s11</span>.
+                                    </li>
+
+                                    <li><b>(5, Comprehensive With Exception Structure)</b>: The reasoning process is
+                                        more comprehensive and detailed,
+                                        incorporating finer reasoning within the larger reasoning steps, and taking into
+                                        account exceptions or discussing different
+                                        scenarios, thus displaying the comprehensiveness of the reasoning.
+
+                                        <br><b>For example, explanation</b> "<span style="color:#6e01eb;">S0:{Mouse
+                                            traps are designed to trap and kill mice}</span>, and
+                                        <span style="color:#eb1101;">S1:{<span style="color:#6e01eb;">s10:{since cheese
+                                                is a common bait for mouse traps,}</span>
+                                            s11:{it poses a danger to mice who might try to eat it.}}</span>
+                                        However, <b>exception</b> <span style="color:#6e01eb;">S2:{
+                                            <span style="color:#eb1101;">s20:{cheese might not be dangerous}</span> for
+                                            s21:{other creatures that are not susceptible to being trapped by mouse
+                                            traps.}</span>"
+                                        consists of three rough steps including
+                                        <span style="color:#6e01eb;">S0</span>,
+                                        <span style="color:#eb1101;">S1</span> and
+                                        <span style="color:#6e01eb;">S2</span>, each of which also is composed of detail
+                                        step.
+                                        Moreover, <span style="color:#6e01eb;">S2</span> is demonstrated as one
+                                        exception step, which discusses the exception case.
+                                    </li>
+                                    <!-- <li>You may disagree with the <span class="concept_c">Answer</span>, but you should pretend it is correct when judging the <span class="concept_d">Explanations</span>.</li>
+                                <li>Some sentences have minor grammar and spelling mistakes, don't end on a period, or cut off partway through because they are long. Please ignore these, and judge on the part of the sentence that is presented.</li>
+                                <li><span style="color:#eb1101;">New!</span> If at least <it>part</it> of the explanation is acceptable and sufficient (even if some other part is nonsensical or rambling), please mark is as acceptable.</li> -->
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- INSTRUCTIONS END -->
+        <!-- EXAMPLES START -->
+        <!-- <div class="card">
+                <div class="card-header" id="examplesHeading">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#examples" aria-expanded="true" aria-controls="examples">
+                            Examples <b><span style="color:#eb1101;">(New!)</span></b> (click to expand/collapse)
+                        </button>
+                    </h5>
+                </div>
+                <div class="collapse show" id="examples" aria-labelledby="examplesHeading" data-parent="#hitinfo">
+                    <div class="card-body">
+                        <div class="card-content col-12">
+                            <!-- EXAMPLE MACRO START -->
+
+        <!-- EXAMPLE MACRO END -->
+
+        <!-- <div id="example-1" class="question">
+                                <div class="question-header question-choice-container pl-5 mb-2 pt-2 pb-2 border-bottom">
+
+                                    <div style="border: 5px solid #00aeef; padding: 10px 20px 10px 20px;"><b>Example #1:</b></div><br>
+
+                                    <div style="border: 0px solid #000; padding: 10px 20px 10px 20px;">
+                                        <span class="concept_a">Question:</span> <b>A bald eagle flies over St. Paul, where is it?</b><br>
+                                        <span class="concept_c">Answer:</span> <b>minnesota</b><br>
+                                    </div>
+
+                                    <div class="row row-12 pl-3 pt-2">
+                                        <strong>Which explanations are acceptable? Select all that you believe adequately explain the answer (this may be none).</strong>
+                                    </div>
+                                    <div class="row-12 pt-1 btn-group-container col-8">
+                                        <div class="form-check btn-group-vertical" data-toggle="buttons">
+                                            <label class="form-check-label btn btn-sm text-left" style="white-space: normal;" for="1">
+                                                <input class="btm-info" type="radio" name="ex1_valid" id="ex1_valid_1" autocomplete="off" value="1" required> Bald eagles are native to the United States, but are rarer in Minnesota than in other states because Minnesota has a small supply of their primary foods (fish, mice, etc.).
+                                            </label>
+                                            <label class="form-check-label btn btn-sm text-left" style="white-space: normal;" for="2">
+                                                <input class="btm-info" type="radio" name="ex1_valid" id="ex1_valid_2" autocomplete="off" value="2" required> St. Paul is a city in Minnesota, so a bald eagle flying over it would likely live in Minnesota.
+                                            </label>
+                                            <label class="form-check-label btn btn-sm text-left" style="white-space: normal;" for="3">
+                                                <input class="btm-info" type="radio" name="ex1_valid" id="ex1_valid_3" autocomplete="off" value="3" required> St. Paul is in Minnesota.
+                                            </label>
+                                            <label class="form-check-label btn btn-sm text-left" style="white-space: normal;" for="4">
+                                                <input class="btm-info" type="radio" name="ex1_valid" id="ex1_valid_4" autocomplete="off" value="4" required> The question assumes that you've seen the bald eagles that live in Minnesota.
+                                            </label>
+                                            <label class="form-check-label btn btn-sm text-left" style="white-space: normal;" for="5">
+                                                <input class="btm-info" type="radio" name="ex1_valid" id="ex1_valid_5" autocomplete="off" value="5" required> Bald eagles live in northern North America, and can be found anywhere there. Given that one is flying over St. Paul, it must be either migrating, or it could be a photographer, making its appearance in the city unusual.
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="row row-12 pl-3 pt-2">
+                                        <strong>Possible answer:</strong>
+                                    </div>
+                                    <div class="row-12 pt-1 btn-group-vertical col-8">
+                                        <button class="btn btn-sm btm-info text-left " style="white-space: normal;">Bald eagles are native to the United States, but are rarer in Minnesota than in other states because Minnesota has a small supply of their primary foods (fish, mice, etc.).</button>
+                                        <button class="btn btn-sm btm-info text-left two-background" style="white-space: normal;">St. Paul is a city in Minnesota, so a bald eagle flying over it would likely live in Minnesota.</button>
+                                        <button class="btn btn-sm btm-info text-left three-background" style="white-space: normal;">St. Paul is in Minnesota.</button>
+                                        <button class="btn btn-sm btm-info text-left " style="white-space: normal;">The question assumes that you've seen the bald eagles that live in Minnesota.</button>
+                                        <button class="btn btn-sm btm-info text-left " style="white-space: normal;">Bald eagles live in northern North America, and can be found anywhere there. Given that one is flying over St. Paul, it must be either migrating, or it could be a photographer, making its appearance in the city unusual.</button>
+                                    </div>
+                                    <br>
+                                    <br>
+                                    One possible answer is that only the second and third explanations are acceptable. The first, fourth, and fifth explanations do not provide an explanation for the fact that St. Paul is in Minnesota.
+                                    <br>
+                                    <br>
+                                    Another possible answer is that only the third explanation is acceptable (since the second explanation incorrectly states that the bald eagle <em>lives</em> in Minnesota). However, we prefer that you err on the side of being forgiving if part of the explanation is correct.
+
+                                    <br>
+                                    <br>
+                                    <div style="border: 5px solid #00aeef; padding: 10px 20px 10px 20px;"><b>Example #2:</b></div><br>
+
+
+                                    <div style="border: 0px solid #000; padding: 10px 20px 10px 20px;">
+                                        <span class="concept_a">Question:</span> <b>Even if was clean and chlorinated, shallow water wouldn't make for much summer fun in your backyard what?</b><br>
+                                        <span class="concept_c">Answer:</span> <b>swimming pool</b><br>
+                                    </div>
+
+                                    <div class="row row-12 pl-3 pt-2">
+                                        <strong>Which explanations are acceptable? Select all that you believe adequately explain the answer (this may be none).</strong>
+                                    </div>
+                                    <div class="row-12 pt-1 btn-group-container col-8">
+                                        <div class="form-check btn-group-vertical" data-toggle="buttons">
+                                            <label class="form-check-label btn btn-sm text-left" style="white-space: normal;" for="1">
+                                                <input class="btm-info" type="radio" name="ex1_valid" id="ex1_valid_1" autocomplete="off" value="1" required> It would be illegal to use and non-sanitary to use a lake or other body of water as a swimming pool.
+                                            </label>
+                                            <label class="form-check-label btn btn-sm text-left" style="white-space: normal;" for="2">
+                                                <input class="btm-info" type="radio" name="ex1_valid" id="ex1_valid_2" autocomplete="off" value="2" required> Pools seem to be the kind of shallow water that people would swim in for fun.
+                                            </label>
+                                            <label class="form-check-label btn btn-sm text-left" style="white-space: normal;" for="3">
+                                                <input class="btm-info" type="radio" name="ex1_valid" id="ex1_valid_3" autocomplete="off" value="3" required> Swimming pools get deeper than puddles or ponds.
+                                            </label>
+                                            <label class="form-check-label btn btn-sm text-left" style="white-space: normal;" for="4">
+                                                <input class="btm-info" type="radio" name="ex1_valid" id="ex1_valid_4" autocomplete="off" value="4" required> Pools are the only body of water that contain both swimming-friendly water and shallow water.
+                                            </label>
+                                            <label class="form-check-label btn btn-sm text-left" style="white-space: normal;" for="5">
+                                                <input class="btm-info" type="radio" name="ex1_valid" id="ex1_valid_5" autocomplete="off" value="5" required> Swimming pools are often used for summer fun.
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="row row-12 pl-3 pt-2">
+                                        <strong>Possible answer:</strong>
+                                    </div>
+                                    <div class="row-12 pt-1 btn-group-vertical col-8">
+                                        <button class="btn btn-sm btm-info text-left " style="white-space: normal;">It would be illegal to use and non-sanitary to use a lake or other body of water as a swimming pool.</button>
+                                        <button class="btn btn-sm btm-info text-left " style="white-space: normal;">Pools seem to be the kind of shallow water that people would swim in for fun.</button>
+                                        <button class="btn btn-sm btm-info text-left three-background" style="white-space: normal;">Swimming pools get deeper than puddles or ponds.</button>
+                                        <button class="btn btn-sm btm-info text-left " style="white-space: normal;">Pools are the only body of water that contain both swimming-friendly water and shallow water.</button>
+                                        <button class="btn btn-sm btm-info text-left five-background" style="white-space: normal;">Swimming pools are often used for summer fun.</button>
+                                    </div>
+                                    <br>
+                                    <br>
+                                    The question implies that the answer must be a body of water that can get deep, and must be able to be used for summer fun.
+                                    <br>
+                                    <br>
+                                    One possible answer is that only the fifth explanation is acceptable. The first, second, and fourth explanations do not explain that pools can get deep or that pools can be used for summer fun. The fifth explanation explains at least one of these facts.
+                                    <br>
+                                    <br>
+                                    Another possible answer is that both the third and the fifth explanations are acceptable, since the third explanation indirectly states that pools can get deep (although it is somewhat debatable if they are deeper than ponds).
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+        <!-- EXAMPLES END -->
+        <!-- ACCORDION END -->
+
+        <!-- MTURK INPUT START -->
+        <div class="col-12 mt-3 mb-1 border-top">
+
+            <form name='mturk_form' method='post' id='mturk_form' action='https://www.mturk.com/mturk/externalSubmit'>
+                <input type='hidden' value='' name='assignmentId' id='assignmentId' />
+                <input type='hidden' name='ee' id='ee' />
+
+                <!-- QUESTION MACRO START -->
+
+                <!-- GOAL CATEGORY MACRO END -->
+
+                <!-- GOAL CAT START -->
+
+                <div id="question-1" class="question">
+                    <div class="question-header question-choice-container pl-5 mb-2 pt-2 pb-2 border-bottom">
+
+                        <div style="border: 0px solid #000; padding: 10px 20px 10px 20px;">
+                            <span class="concept_a">Question:</span> <b>${question}</b><br>
+                            <span class="concept_c">Answer:</span> <b>${gold_label}</b><br>
+                        </div>
+
+
+                        <!-- <div class="row row-12 pl-3 pt-2">
+                            <strong>Firstly, scoring the following explanations in term of reasoning facts and structure; then, refining these rough scores by head-to-head comparisons.</strong>
+                        </div> -->
+                        <!-- <div class="row-12 pt-1 btn-group-container col-8">
+                            <div class="form-check btn-group-vertical" data-toggle="buttons">
+                                <label class="form-check-label btn btn-sm text-left" style="white-space: normal;" for="1">
+                                    <input type="checkbox" name="acceptable" id="acceptable_1" autocomplete="off" value="1"> ${explanation_1}
+                                </label>
+                                <label class="form-check-label btn btn-sm text-left" style="white-space: normal;" for="2">
+                                    <input type="checkbox" name="acceptable" id="acceptable_2" autocomplete="off" value="2"> ${explanation_2}
+                                </label>
+                                <label class="form-check-label btn btn-sm text-left" style="white-space: normal;" for="3">
+                                    <input type="checkbox" name="acceptable" id="acceptable_3" autocomplete="off" value="3"> ${explanation_3}
+                                </label>
+                                <label class="form-check-label btn btn-sm text-left" style="white-space: normal;" for="4">
+                                    <input type="checkbox" name="acceptable" id="acceptable_4" autocomplete="off" value="4"> ${explanation_4}
+                                </label>
+                                <label class="form-check-label btn btn-sm text-left" style="white-space: normal;" for="5">
+                                    <input type="checkbox" name="acceptable" id="acceptable_5" autocomplete="off" value="5"> ${explanation_5}
+                                </label>
+                            </div>
+                        </div>
+                        <br> -->
+                        <b> 1 ${explanation_1} </b>
+                        <!-- <b>Part-1: First-Stage, Rough Scoring</b> -->
+                        <div id="question-1" class="question">
+                            <div class="question-header question-choice-container pl-5 mb-2 pt-2 pb-2 border-bottom">
+                                <div class="row row-12 pl-3 pt-2">
+                                    <strong><b><span style="color:#008d4b;">First Stage, Rough Scoring</span></b>: 1)
+                                        What is the rough score of this explanation in term of reasoning facts?
+                                    </strong>
+                                </div>
+                                <div class="row-12 pt-1 btn-group-container col-5">
+                                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                        <label class="btn btn-secondary btn-sm" for="-1">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_1"
+                                                autocomplete="off" value="-1" required>(1, Nonsensical Facts)
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="0">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_2"
+                                                autocomplete="off" value="0" required>(2, Irrelevant or Erroneous Facts)
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="1">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_3"
+                                                autocomplete="off" value="1" required>(3, Relevant but Insufficient
+                                            Facts)
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="-9">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_4"
+                                                autocomplete="off" value="-9" required>(4, Succinct yet Precise Facts)
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="-9">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_4"
+                                                autocomplete="off" value="-9" required>(5, Sufficient yet Precise Facts)
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="question-1" class="question">
+                            <div class="question-header question-choice-container pl-5 mb-2 pt-2 pb-2 border-bottom">
+                                <div class="row row-12 pl-3 pt-2">
+                                    <strong><b><span style="color:#008d4b;">First Stage, Rough Scoring</span></b>: 2)
+                                        What is the rough score of this explanation in term of reasoning structure?
+                                    </strong>
+                                </div>
+                                <div class="row-12 pt-1 btn-group-container col-5">
+                                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                        <label class="btn btn-secondary btn-sm" for="-1">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_1"
+                                                autocomplete="off" value="-1" required>(1, Chaotic Structure)
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="0">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_2"
+                                                autocomplete="off" value="0" required>(2, Elementary Structure)
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="1">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_3"
+                                                autocomplete="off" value="1" required>(3, Simple Structure)
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="-9">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_4"
+                                                autocomplete="off" value="-9" required>(4, Comprehensive Structure)
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="-9">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_4"
+                                                autocomplete="off" value="-9" required>(5, Comprehensive Structure With
+                                            Exception)
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="question-1" class="question">
+                            <div class="question-header question-choice-container pl-5 mb-2 pt-2 pb-2 border-bottom">
+                                <div class="row row-12 pl-3 pt-2">
+                                    <strong><b><span style="color:#008d4b;">Second Stage, Refined Scoring via
+                                                Comparison</span></b>: 1) What is the refined score of this explanation
+                                        in term of reasoning facts? </strong>
+                                </div>
+                                <div class="row-12 pt-1 btn-group-container col-5">
+                                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                        <label class="btn btn-secondary btn-sm" for="-1">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_1"
+                                                autocomplete="off" value="-1" required>(1, Nonsensical Facts)
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="-1">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_1"
+                                                autocomplete="off" value="-1" required>(1.5,)
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="0">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_2"
+                                                autocomplete="off" value="0" required>(2, Irrelevant or Erroneous Facts)
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="0">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_2"
+                                                autocomplete="off" value="0" required>(2.5, )
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="1">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_3"
+                                                autocomplete="off" value="1" required>(3, Relevant but Insufficient
+                                            Facts)
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="1">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_3"
+                                                autocomplete="off" value="1" required>(3.5, )
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="-9">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_4"
+                                                autocomplete="off" value="-9" required>(4, Succinct yet Precise Facts)
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="-9">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_4"
+                                                autocomplete="off" value="-9" required>(4.5, )
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="-9">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_4"
+                                                autocomplete="off" value="-9" required>(5, Sufficient yet Precise Facts)
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="question-1" class="question">
+                            <div class="question-header question-choice-container pl-5 mb-2 pt-2 pb-2 border-bottom">
+                                <div class="row row-12 pl-3 pt-2">
+                                    <strong><b><span style="color:#008d4b;">Second Stage, Refined Scoring via
+                                                Comparison</span></b>: 2) What is the refined score of this explanation
+                                        in term of reasoning structure? </strong>
+                                </div>
+                                <div class="row-12 pt-1 btn-group-container col-5">
+                                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                        <label class="btn btn-secondary btn-sm" for="-1">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_1"
+                                                autocomplete="off" value="-1" required>(1, Chaotic Structure)
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="-1">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_1"
+                                                autocomplete="off" value="-1" required>(1.5, )
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="0">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_2"
+                                                autocomplete="off" value="0" required>(2, Elementary Structure)
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="0">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_2"
+                                                autocomplete="off" value="0" required>(2.5, )
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="1">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_3"
+                                                autocomplete="off" value="1" required>(3, Simple Structure)
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="1">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_3"
+                                                autocomplete="off" value="1" required>(3.5, )
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="-9">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_4"
+                                                autocomplete="off" value="-9" required>(4, Comprehensive Structure)
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="-9">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_4"
+                                                autocomplete="off" value="-9" required>(4.5, )
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="-9">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_4"
+                                                autocomplete="off" value="-9" required>(5, Comprehensive Structure With
+                                            Exception)
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <b> 2 ${explanation_2} </b>
+                        <!-- <b>Part-1: First-Stage, Rough Scoring</b> -->
+                        <div id="question-1" class="question">
+                            <div class="question-header question-choice-container pl-5 mb-2 pt-2 pb-2 border-bottom">
+                                <div class="row row-12 pl-3 pt-2">
+                                    <strong><b><span style="color:#008d4b;">First Stage, Rough Scoring</span></b>: 1)
+                                        What is the rough score of this explanation in term of reasoning facts?
+                                    </strong>
+                                </div>
+                                <div class="row-12 pt-1 btn-group-container col-5">
+                                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                        <label class="btn btn-secondary btn-sm" for="-1">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_1"
+                                                autocomplete="off" value="-1" required>(1, Nonsensical Facts)
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="0">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_2"
+                                                autocomplete="off" value="0" required>(2, Irrelevant or Erroneous Facts)
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="1">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_3"
+                                                autocomplete="off" value="1" required>(3, Relevant but Insufficient
+                                            Facts)
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="-9">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_4"
+                                                autocomplete="off" value="-9" required>(4, Succinct yet Precise Facts)
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="-9">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_4"
+                                                autocomplete="off" value="-9" required>(5, Sufficient yet Precise Facts)
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="question-1" class="question">
+                            <div class="question-header question-choice-container pl-5 mb-2 pt-2 pb-2 border-bottom">
+                                <div class="row row-12 pl-3 pt-2">
+                                    <strong><b><span style="color:#008d4b;">First Stage, Rough Scoring</span></b>: 2)
+                                        What is the rough score of this explanation in term of reasoning structure?
+                                    </strong>
+                                </div>
+                                <div class="row-12 pt-1 btn-group-container col-5">
+                                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                        <label class="btn btn-secondary btn-sm" for="-1">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_1"
+                                                autocomplete="off" value="-1" required>(1, Chaotic Structure)
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="0">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_2"
+                                                autocomplete="off" value="0" required>(2, Elementary Structure)
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="1">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_3"
+                                                autocomplete="off" value="1" required>(3, Simple Structure)
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="-9">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_4"
+                                                autocomplete="off" value="-9" required>(4, Comprehensive Structure)
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="-9">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_4"
+                                                autocomplete="off" value="-9" required>(5, Comprehensive Structure With
+                                            Exception)
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="question-1" class="question">
+                            <div class="question-header question-choice-container pl-5 mb-2 pt-2 pb-2 border-bottom">
+                                <div class="row row-12 pl-3 pt-2">
+                                    <strong><b><span style="color:#008d4b;">Second Stage, Refined Scoring via
+                                                Comparison</span></b>: 1) What is the refined score of this explanation
+                                        in term of reasoning facts? </strong>
+                                </div>
+                                <div class="row-12 pt-1 btn-group-container col-5">
+                                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                        <label class="btn btn-secondary btn-sm" for="-1">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_1"
+                                                autocomplete="off" value="-1" required>(1, Nonsensical Facts)
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="-1">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_1"
+                                                autocomplete="off" value="-1" required>(1.5,)
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="0">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_2"
+                                                autocomplete="off" value="0" required>(2, Irrelevant or Erroneous Facts)
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="0">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_2"
+                                                autocomplete="off" value="0" required>(2.5, )
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="1">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_3"
+                                                autocomplete="off" value="1" required>(3, Relevant but Insufficient
+                                            Facts)
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="1">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_3"
+                                                autocomplete="off" value="1" required>(3.5, )
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="-9">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_4"
+                                                autocomplete="off" value="-9" required>(4, Succinct yet Precise Facts)
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="-9">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_4"
+                                                autocomplete="off" value="-9" required>(4.5, )
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="-9">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_4"
+                                                autocomplete="off" value="-9" required>(5, Sufficient yet Precise Facts)
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="question-1" class="question">
+                            <div class="question-header question-choice-container pl-5 mb-2 pt-2 pb-2 border-bottom">
+                                <div class="row row-12 pl-3 pt-2">
+                                    <strong><b><span style="color:#008d4b;">Second Stage, Refined Scoring via
+                                                Comparison</span></b>: 2) What is the refined score of this explanation
+                                        in term of reasoning structure? </strong>
+                                </div>
+                                <div class="row-12 pt-1 btn-group-container col-5">
+                                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                        <label class="btn btn-secondary btn-sm" for="-1">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_1"
+                                                autocomplete="off" value="-1" required>(1, Chaotic Structure)
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="-1">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_1"
+                                                autocomplete="off" value="-1" required>(1.5, )
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="0">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_2"
+                                                autocomplete="off" value="0" required>(2, Elementary Structure)
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="0">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_2"
+                                                autocomplete="off" value="0" required>(2.5, )
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="1">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_3"
+                                                autocomplete="off" value="1" required>(3, Simple Structure)
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="1">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_3"
+                                                autocomplete="off" value="1" required>(3.5, )
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="-9">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_4"
+                                                autocomplete="off" value="-9" required>(4, Comprehensive Structure)
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="-9">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_4"
+                                                autocomplete="off" value="-9" required>(4.5, )
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="-9">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_4"
+                                                autocomplete="off" value="-9" required>(5, Comprehensive Structure With
+                                            Exception)
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <b> 3 ${explanation_3} </b>
+                        <!-- <b>Part-1: First-Stage, Rough Scoring</b> -->
+                        <div id="question-1" class="question">
+                            <div class="question-header question-choice-container pl-5 mb-2 pt-2 pb-2 border-bottom">
+                                <div class="row row-12 pl-3 pt-2">
+                                    <strong><b><span style="color:#008d4b;">First Stage, Rough Scoring</span></b>: 1)
+                                        What is the rough score of this explanation in term of reasoning facts?
+                                    </strong>
+                                </div>
+                                <div class="row-12 pt-1 btn-group-container col-5">
+                                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                        <label class="btn btn-secondary btn-sm" for="-1">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_1"
+                                                autocomplete="off" value="-1" required>(1, Nonsensical Facts)
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="0">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_2"
+                                                autocomplete="off" value="0" required>(2, Irrelevant or Erroneous Facts)
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="1">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_3"
+                                                autocomplete="off" value="1" required>(3, Relevant but Insufficient
+                                            Facts)
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="-9">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_4"
+                                                autocomplete="off" value="-9" required>(4, Succinct yet Precise Facts)
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="-9">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_4"
+                                                autocomplete="off" value="-9" required>(5, Sufficient yet Precise Facts)
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="question-1" class="question">
+                            <div class="question-header question-choice-container pl-5 mb-2 pt-2 pb-2 border-bottom">
+                                <div class="row row-12 pl-3 pt-2">
+                                    <strong><b><span style="color:#008d4b;">First Stage, Rough Scoring</span></b>: 2)
+                                        What is the rough score of this explanation in term of reasoning structure?
+                                    </strong>
+                                </div>
+                                <div class="row-12 pt-1 btn-group-container col-5">
+                                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                        <label class="btn btn-secondary btn-sm" for="-1">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_1"
+                                                autocomplete="off" value="-1" required>(1, Chaotic Structure)
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="0">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_2"
+                                                autocomplete="off" value="0" required>(2, Elementary Structure)
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="1">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_3"
+                                                autocomplete="off" value="1" required>(3, Simple Structure)
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="-9">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_4"
+                                                autocomplete="off" value="-9" required>(4, Comprehensive Structure)
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="-9">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_4"
+                                                autocomplete="off" value="-9" required>(5, Comprehensive Structure With
+                                            Exception)
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="question-1" class="question">
+                            <div class="question-header question-choice-container pl-5 mb-2 pt-2 pb-2 border-bottom">
+                                <div class="row row-12 pl-3 pt-2">
+                                    <strong><b><span style="color:#008d4b;">Second Stage, Refined Scoring via
+                                                Comparison</span></b>: 1) What is the refined score of this explanation
+                                        in term of reasoning facts? </strong>
+                                </div>
+                                <div class="row-12 pt-1 btn-group-container col-5">
+                                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                        <label class="btn btn-secondary btn-sm" for="-1">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_1"
+                                                autocomplete="off" value="-1" required>(1, Nonsensical Facts)
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="-1">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_1"
+                                                autocomplete="off" value="-1" required>(1.5,)
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="0">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_2"
+                                                autocomplete="off" value="0" required>(2, Irrelevant or Erroneous Facts)
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="0">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_2"
+                                                autocomplete="off" value="0" required>(2.5, )
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="1">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_3"
+                                                autocomplete="off" value="1" required>(3, Relevant but Insufficient
+                                            Facts)
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="1">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_3"
+                                                autocomplete="off" value="1" required>(3.5, )
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="-9">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_4"
+                                                autocomplete="off" value="-9" required>(4, Succinct yet Precise Facts)
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="-9">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_4"
+                                                autocomplete="off" value="-9" required>(4.5, )
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="-9">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_4"
+                                                autocomplete="off" value="-9" required>(5, Sufficient yet Precise Facts)
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="question-1" class="question">
+                            <div class="question-header question-choice-container pl-5 mb-2 pt-2 pb-2 border-bottom">
+                                <div class="row row-12 pl-3 pt-2">
+                                    <strong><b><span style="color:#008d4b;">Second Stage, Refined Scoring via
+                                                Comparison</span></b>: 2) What is the refined score of this explanation
+                                        in term of reasoning structure? </strong>
+                                </div>
+                                <div class="row-12 pt-1 btn-group-container col-5">
+                                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                        <label class="btn btn-secondary btn-sm" for="-1">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_1"
+                                                autocomplete="off" value="-1" required>(1, Chaotic Structure)
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="-1">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_1"
+                                                autocomplete="off" value="-1" required>(1.5, )
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="0">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_2"
+                                                autocomplete="off" value="0" required>(2, Elementary Structure)
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="0">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_2"
+                                                autocomplete="off" value="0" required>(2.5, )
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="1">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_3"
+                                                autocomplete="off" value="1" required>(3, Simple Structure)
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="1">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_3"
+                                                autocomplete="off" value="1" required>(3.5, )
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="-9">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_4"
+                                                autocomplete="off" value="-9" required>(4, Comprehensive Structure)
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="-9">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_4"
+                                                autocomplete="off" value="-9" required>(4.5, )
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="-9">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_4"
+                                                autocomplete="off" value="-9" required>(5, Comprehensive Structure With
+                                            Exception)
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <b> 4 ${explanation_4} </b>
+                        <!-- <b>Part-1: First-Stage, Rough Scoring</b> -->
+                        <div id="question-1" class="question">
+                            <div class="question-header question-choice-container pl-5 mb-2 pt-2 pb-2 border-bottom">
+                                <div class="row row-12 pl-3 pt-2">
+                                    <strong><b><span style="color:#008d4b;">First Stage, Rough Scoring</span></b>: 1)
+                                        What is the rough score of this explanation in term of reasoning facts?
+                                    </strong>
+                                </div>
+                                <div class="row-12 pt-1 btn-group-container col-5">
+                                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                        <label class="btn btn-secondary btn-sm" for="-1">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_1"
+                                                autocomplete="off" value="-1" required>(1, Nonsensical Facts)
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="0">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_2"
+                                                autocomplete="off" value="0" required>(2, Irrelevant or Erroneous Facts)
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="1">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_3"
+                                                autocomplete="off" value="1" required>(3, Relevant but Insufficient
+                                            Facts)
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="-9">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_4"
+                                                autocomplete="off" value="-9" required>(4, Succinct yet Precise Facts)
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="-9">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_4"
+                                                autocomplete="off" value="-9" required>(5, Sufficient yet Precise Facts)
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="question-1" class="question">
+                            <div class="question-header question-choice-container pl-5 mb-2 pt-2 pb-2 border-bottom">
+                                <div class="row row-12 pl-3 pt-2">
+                                    <strong><b><span style="color:#008d4b;">First Stage, Rough Scoring</span></b>: 2)
+                                        What is the rough score of this explanation in term of reasoning structure?
+                                    </strong>
+                                </div>
+                                <div class="row-12 pt-1 btn-group-container col-5">
+                                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                        <label class="btn btn-secondary btn-sm" for="-1">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_1"
+                                                autocomplete="off" value="-1" required>(1, Chaotic Structure)
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="0">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_2"
+                                                autocomplete="off" value="0" required>(2, Elementary Structure)
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="1">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_3"
+                                                autocomplete="off" value="1" required>(3, Simple Structure)
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="-9">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_4"
+                                                autocomplete="off" value="-9" required>(4, Comprehensive Structure)
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="-9">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_4"
+                                                autocomplete="off" value="-9" required>(5, Comprehensive Structure With
+                                            Exception)
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="question-1" class="question">
+                            <div class="question-header question-choice-container pl-5 mb-2 pt-2 pb-2 border-bottom">
+                                <div class="row row-12 pl-3 pt-2">
+                                    <strong><b><span style="color:#008d4b;">Second Stage, Refined Scoring via
+                                                Comparison</span></b>: 1) What is the refined score of this explanation
+                                        in term of reasoning facts? </strong>
+                                </div>
+                                <div class="row-12 pt-1 btn-group-container col-5">
+                                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                        <label class="btn btn-secondary btn-sm" for="-1">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_1"
+                                                autocomplete="off" value="-1" required>(1, Nonsensical Facts)
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="-1">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_1"
+                                                autocomplete="off" value="-1" required>(1.5,)
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="0">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_2"
+                                                autocomplete="off" value="0" required>(2, Irrelevant or Erroneous Facts)
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="0">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_2"
+                                                autocomplete="off" value="0" required>(2.5, )
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="1">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_3"
+                                                autocomplete="off" value="1" required>(3, Relevant but Insufficient
+                                            Facts)
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="1">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_3"
+                                                autocomplete="off" value="1" required>(3.5, )
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="-9">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_4"
+                                                autocomplete="off" value="-9" required>(4, Succinct yet Precise Facts)
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="-9">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_4"
+                                                autocomplete="off" value="-9" required>(4.5, )
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="-9">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_4"
+                                                autocomplete="off" value="-9" required>(5, Sufficient yet Precise Facts)
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="question-1" class="question">
+                            <div class="question-header question-choice-container pl-5 mb-2 pt-2 pb-2 border-bottom">
+                                <div class="row row-12 pl-3 pt-2">
+                                    <strong><b><span style="color:#008d4b;">Second Stage, Refined Scoring via
+                                                Comparison</span></b>: 2) What is the refined score of this explanation
+                                        in term of reasoning structure? </strong>
+                                </div>
+                                <div class="row-12 pt-1 btn-group-container col-5">
+                                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                        <label class="btn btn-secondary btn-sm" for="-1">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_1"
+                                                autocomplete="off" value="-1" required>(1, Chaotic Structure)
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="-1">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_1"
+                                                autocomplete="off" value="-1" required>(1.5, )
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="0">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_2"
+                                                autocomplete="off" value="0" required>(2, Elementary Structure)
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="0">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_2"
+                                                autocomplete="off" value="0" required>(2.5, )
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="1">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_3"
+                                                autocomplete="off" value="1" required>(3, Simple Structure)
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="1">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_3"
+                                                autocomplete="off" value="1" required>(3.5, )
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="-9">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_4"
+                                                autocomplete="off" value="-9" required>(4, Comprehensive Structure)
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="-9">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_4"
+                                                autocomplete="off" value="-9" required>(4.5, )
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="-9">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_4"
+                                                autocomplete="off" value="-9" required>(5, Comprehensive Structure With
+                                            Exception)
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <b> 5 ${explanation_5} </b>
+                        <!-- <b>Part-1: First-Stage, Rough Scoring</b> -->
+                        <div id="question-1" class="question">
+                            <div class="question-header question-choice-container pl-5 mb-2 pt-2 pb-2 border-bottom">
+                                <div class="row row-12 pl-3 pt-2">
+                                    <strong><b><span style="color:#008d4b;">First Stage, Rough Scoring</span></b>: 1)
+                                        What is the rough score of this explanation in term of reasoning facts?
+                                    </strong>
+                                </div>
+                                <div class="row-12 pt-1 btn-group-container col-5">
+                                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                        <label class="btn btn-secondary btn-sm" for="-1">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_1"
+                                                autocomplete="off" value="-1" required>(1, Nonsensical Facts)
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="0">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_2"
+                                                autocomplete="off" value="0" required>(2, Irrelevant or Erroneous Facts)
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="1">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_3"
+                                                autocomplete="off" value="1" required>(3, Relevant but Insufficient
+                                            Facts)
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="-9">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_4"
+                                                autocomplete="off" value="-9" required>(4, Succinct yet Precise Facts)
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="-9">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_4"
+                                                autocomplete="off" value="-9" required>(5, Sufficient yet Precise Facts)
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="question-1" class="question">
+                            <div class="question-header question-choice-container pl-5 mb-2 pt-2 pb-2 border-bottom">
+                                <div class="row row-12 pl-3 pt-2">
+                                    <strong><b><span style="color:#008d4b;">First Stage, Rough Scoring</span></b>: 2)
+                                        What is the rough score of this explanation in term of reasoning structure?
+                                    </strong>
+                                </div>
+                                <div class="row-12 pt-1 btn-group-container col-5">
+                                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                        <label class="btn btn-secondary btn-sm" for="-1">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_1"
+                                                autocomplete="off" value="-1" required>(1, Chaotic Structure)
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="0">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_2"
+                                                autocomplete="off" value="0" required>(2, Elementary Structure)
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="1">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_3"
+                                                autocomplete="off" value="1" required>(3, Simple Structure)
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="-9">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_4"
+                                                autocomplete="off" value="-9" required>(4, Comprehensive Structure)
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="-9">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_4"
+                                                autocomplete="off" value="-9" required>(5, Comprehensive Structure With
+                                            Exception)
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="question-1" class="question">
+                            <div class="question-header question-choice-container pl-5 mb-2 pt-2 pb-2 border-bottom">
+                                <div class="row row-12 pl-3 pt-2">
+                                    <strong><b><span style="color:#008d4b;">Second Stage, Refined Scoring via
+                                                Comparison</span></b>: 1) What is the refined score of this explanation
+                                        in term of reasoning facts? </strong>
+                                </div>
+                                <div class="row-12 pt-1 btn-group-container col-5">
+                                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                        <label class="btn btn-secondary btn-sm" for="-1">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_1"
+                                                autocomplete="off" value="-1" required>(1, Nonsensical Facts)
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="-1">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_1"
+                                                autocomplete="off" value="-1" required>(1.5,)
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="0">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_2"
+                                                autocomplete="off" value="0" required>(2, Irrelevant or Erroneous Facts)
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="0">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_2"
+                                                autocomplete="off" value="0" required>(2.5, )
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="1">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_3"
+                                                autocomplete="off" value="1" required>(3, Relevant but Insufficient
+                                            Facts)
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="1">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_3"
+                                                autocomplete="off" value="1" required>(3.5, )
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="-9">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_4"
+                                                autocomplete="off" value="-9" required>(4, Succinct yet Precise Facts)
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="-9">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_4"
+                                                autocomplete="off" value="-9" required>(4.5, )
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="-9">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_4"
+                                                autocomplete="off" value="-9" required>(5, Sufficient yet Precise Facts)
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="question-1" class="question">
+                            <div class="question-header question-choice-container pl-5 mb-2 pt-2 pb-2 border-bottom">
+                                <div class="row row-12 pl-3 pt-2">
+                                    <strong><b><span style="color:#008d4b;">Second Stage, Refined Scoring via
+                                                Comparison</span></b>: 2) What is the refined score of this explanation
+                                        in term of reasoning structure? </strong>
+                                </div>
+                                <div class="row-12 pt-1 btn-group-container col-5">
+                                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                        <label class="btn btn-secondary btn-sm" for="-1">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_1"
+                                                autocomplete="off" value="-1" required>(1, Chaotic Structure)
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="-1">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_1"
+                                                autocomplete="off" value="-1" required>(1.5, )
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="0">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_2"
+                                                autocomplete="off" value="0" required>(2, Elementary Structure)
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="0">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_2"
+                                                autocomplete="off" value="0" required>(2.5, )
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="1">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_3"
+                                                autocomplete="off" value="1" required>(3, Simple Structure)
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="1">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_3"
+                                                autocomplete="off" value="1" required>(3.5, )
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="-9">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_4"
+                                                autocomplete="off" value="-9" required>(4, Comprehensive Structure)
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="-9">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_4"
+                                                autocomplete="off" value="-9" required>(4.5, )
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="-9">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_4"
+                                                autocomplete="off" value="-9" required>(5, Comprehensive Structure With
+                                            Exception)
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <b> 6 ${explanation_6} </b>
+                        <!-- <b>Part-1: First-Stage, Rough Scoring</b> -->
+                        <div id="question-1" class="question">
+                            <div class="question-header question-choice-container pl-5 mb-2 pt-2 pb-2 border-bottom">
+                                <div class="row row-12 pl-3 pt-2">
+                                    <strong><b><span style="color:#008d4b;">First Stage, Rough Scoring</span></b>: 1)
+                                        What is the rough score of this explanation in term of reasoning facts?
+                                    </strong>
+                                </div>
+                                <div class="row-12 pt-1 btn-group-container col-5">
+                                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                        <label class="btn btn-secondary btn-sm" for="-1">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_1"
+                                                autocomplete="off" value="-1" required>(1, Nonsensical Facts)
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="0">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_2"
+                                                autocomplete="off" value="0" required>(2, Irrelevant or Erroneous Facts)
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="1">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_3"
+                                                autocomplete="off" value="1" required>(3, Relevant but Insufficient
+                                            Facts)
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="-9">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_4"
+                                                autocomplete="off" value="-9" required>(4, Succinct yet Precise Facts)
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="-9">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_4"
+                                                autocomplete="off" value="-9" required>(5, Sufficient yet Precise Facts)
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="question-1" class="question">
+                            <div class="question-header question-choice-container pl-5 mb-2 pt-2 pb-2 border-bottom">
+                                <div class="row row-12 pl-3 pt-2">
+                                    <strong><b><span style="color:#008d4b;">First Stage, Rough Scoring</span></b>: 2)
+                                        What is the rough score of this explanation in term of reasoning structure?
+                                    </strong>
+                                </div>
+                                <div class="row-12 pt-1 btn-group-container col-5">
+                                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                        <label class="btn btn-secondary btn-sm" for="-1">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_1"
+                                                autocomplete="off" value="-1" required>(1, Chaotic Structure)
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="0">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_2"
+                                                autocomplete="off" value="0" required>(2, Elementary Structure)
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="1">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_3"
+                                                autocomplete="off" value="1" required>(3, Simple Structure)
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="-9">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_4"
+                                                autocomplete="off" value="-9" required>(4, Comprehensive Structure)
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="-9">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_4"
+                                                autocomplete="off" value="-9" required>(5, Comprehensive Structure With
+                                            Exception)
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="question-1" class="question">
+                            <div class="question-header question-choice-container pl-5 mb-2 pt-2 pb-2 border-bottom">
+                                <div class="row row-12 pl-3 pt-2">
+                                    <strong><b><span style="color:#008d4b;">Second Stage, Refined Scoring via
+                                                Comparison</span></b>: 1) What is the refined score of this explanation
+                                        in term of reasoning facts? </strong>
+                                </div>
+                                <div class="row-12 pt-1 btn-group-container col-5">
+                                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                        <label class="btn btn-secondary btn-sm" for="-1">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_1"
+                                                autocomplete="off" value="-1" required>(1, Nonsensical Facts)
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="-1">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_1"
+                                                autocomplete="off" value="-1" required>(1.5,)
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="0">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_2"
+                                                autocomplete="off" value="0" required>(2, Irrelevant or Erroneous Facts)
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="0">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_2"
+                                                autocomplete="off" value="0" required>(2.5, )
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="1">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_3"
+                                                autocomplete="off" value="1" required>(3, Relevant but Insufficient
+                                            Facts)
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="1">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_3"
+                                                autocomplete="off" value="1" required>(3.5, )
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="-9">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_4"
+                                                autocomplete="off" value="-9" required>(4, Succinct yet Precise Facts)
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="-9">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_4"
+                                                autocomplete="off" value="-9" required>(4.5, )
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="-9">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_4"
+                                                autocomplete="off" value="-9" required>(5, Sufficient yet Precise Facts)
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="question-1" class="question">
+                            <div class="question-header question-choice-container pl-5 mb-2 pt-2 pb-2 border-bottom">
+                                <div class="row row-12 pl-3 pt-2">
+                                    <strong><b><span style="color:#008d4b;">Second Stage, Refined Scoring via
+                                                Comparison</span></b>: 2) What is the refined score of this explanation
+                                        in term of reasoning structure? </strong>
+                                </div>
+                                <div class="row-12 pt-1 btn-group-container col-5">
+                                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                        <label class="btn btn-secondary btn-sm" for="-1">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_1"
+                                                autocomplete="off" value="-1" required>(1, Chaotic Structure)
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="-1">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_1"
+                                                autocomplete="off" value="-1" required>(1.5, )
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="0">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_2"
+                                                autocomplete="off" value="0" required>(2, Elementary Structure)
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="0">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_2"
+                                                autocomplete="off" value="0" required>(2.5, )
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="1">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_3"
+                                                autocomplete="off" value="1" required>(3, Simple Structure)
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="1">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_3"
+                                                autocomplete="off" value="1" required>(3.5, )
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="-9">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_4"
+                                                autocomplete="off" value="-9" required>(4, Comprehensive Structure)
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="-9">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_4"
+                                                autocomplete="off" value="-9" required>(4.5, )
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="-9">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_4"
+                                                autocomplete="off" value="-9" required>(5, Comprehensive Structure With
+                                            Exception)
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <b> 7 ${explanation_7} </b>
+                        <!-- <b>Part-1: First-Stage, Rough Scoring</b> -->
+                        <div id="question-1" class="question">
+                            <div class="question-header question-choice-container pl-5 mb-2 pt-2 pb-2 border-bottom">
+                                <div class="row row-12 pl-3 pt-2">
+                                    <strong><b><span style="color:#008d4b;">First Stage, Rough Scoring</span></b>: 1)
+                                        What is the rough score of this explanation in term of reasoning facts?
+                                    </strong>
+                                </div>
+                                <div class="row-12 pt-1 btn-group-container col-5">
+                                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                        <label class="btn btn-secondary btn-sm" for="-1">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_1"
+                                                autocomplete="off" value="-1" required>(1, Nonsensical Facts)
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="0">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_2"
+                                                autocomplete="off" value="0" required>(2, Irrelevant or Erroneous Facts)
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="1">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_3"
+                                                autocomplete="off" value="1" required>(3, Relevant but Insufficient
+                                            Facts)
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="-9">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_4"
+                                                autocomplete="off" value="-9" required>(4, Succinct yet Precise Facts)
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="-9">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_4"
+                                                autocomplete="off" value="-9" required>(5, Sufficient yet Precise Facts)
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="question-1" class="question">
+                            <div class="question-header question-choice-container pl-5 mb-2 pt-2 pb-2 border-bottom">
+                                <div class="row row-12 pl-3 pt-2">
+                                    <strong><b><span style="color:#008d4b;">First Stage, Rough Scoring</span></b>: 2)
+                                        What is the rough score of this explanation in term of reasoning structure?
+                                    </strong>
+                                </div>
+                                <div class="row-12 pt-1 btn-group-container col-5">
+                                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                        <label class="btn btn-secondary btn-sm" for="-1">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_1"
+                                                autocomplete="off" value="-1" required>(1, Chaotic Structure)
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="0">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_2"
+                                                autocomplete="off" value="0" required>(2, Elementary Structure)
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="1">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_3"
+                                                autocomplete="off" value="1" required>(3, Simple Structure)
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="-9">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_4"
+                                                autocomplete="off" value="-9" required>(4, Comprehensive Structure)
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="-9">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_4"
+                                                autocomplete="off" value="-9" required>(5, Comprehensive Structure With
+                                            Exception)
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="question-1" class="question">
+                            <div class="question-header question-choice-container pl-5 mb-2 pt-2 pb-2 border-bottom">
+                                <div class="row row-12 pl-3 pt-2">
+                                    <strong><b><span style="color:#008d4b;">Second Stage, Refined Scoring via
+                                                Comparison</span></b>: 1) What is the refined score of this explanation
+                                        in term of reasoning facts? </strong>
+                                </div>
+                                <div class="row-12 pt-1 btn-group-container col-5">
+                                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                        <label class="btn btn-secondary btn-sm" for="-1">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_1"
+                                                autocomplete="off" value="-1" required>(1, Nonsensical Facts)
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="-1">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_1"
+                                                autocomplete="off" value="-1" required>(1.5,)
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="0">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_2"
+                                                autocomplete="off" value="0" required>(2, Irrelevant or Erroneous Facts)
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="0">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_2"
+                                                autocomplete="off" value="0" required>(2.5, )
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="1">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_3"
+                                                autocomplete="off" value="1" required>(3, Relevant but Insufficient
+                                            Facts)
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="1">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_3"
+                                                autocomplete="off" value="1" required>(3.5, )
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="-9">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_4"
+                                                autocomplete="off" value="-9" required>(4, Succinct yet Precise Facts)
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="-9">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_4"
+                                                autocomplete="off" value="-9" required>(4.5, )
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="-9">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_4"
+                                                autocomplete="off" value="-9" required>(5, Sufficient yet Precise Facts)
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="question-1" class="question">
+                            <div class="question-header question-choice-container pl-5 mb-2 pt-2 pb-2 border-bottom">
+                                <div class="row row-12 pl-3 pt-2">
+                                    <strong><b><span style="color:#008d4b;">Second Stage, Refined Scoring via
+                                                Comparison</span></b>: 2) What is the refined score of this explanation
+                                        in term of reasoning structure? </strong>
+                                </div>
+                                <div class="row-12 pt-1 btn-group-container col-5">
+                                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                        <label class="btn btn-secondary btn-sm" for="-1">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_1"
+                                                autocomplete="off" value="-1" required>(1, Chaotic Structure)
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="-1">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_1"
+                                                autocomplete="off" value="-1" required>(1.5, )
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="0">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_2"
+                                                autocomplete="off" value="0" required>(2, Elementary Structure)
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="0">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_2"
+                                                autocomplete="off" value="0" required>(2.5, )
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="1">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_3"
+                                                autocomplete="off" value="1" required>(3, Simple Structure)
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="1">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_3"
+                                                autocomplete="off" value="1" required>(3.5, )
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="-9">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_4"
+                                                autocomplete="off" value="-9" required>(4, Comprehensive Structure)
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="-9">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_4"
+                                                autocomplete="off" value="-9" required>(4.5, )
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="-9">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_4"
+                                                autocomplete="off" value="-9" required>(5, Comprehensive Structure With
+                                            Exception)
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <b> 8 ${explanation_8} </b>
+                        <!-- <b>Part-1: First-Stage, Rough Scoring</b> -->
+                        <div id="question-1" class="question">
+                            <div class="question-header question-choice-container pl-5 mb-2 pt-2 pb-2 border-bottom">
+                                <div class="row row-12 pl-3 pt-2">
+                                    <strong><b><span style="color:#008d4b;">First Stage, Rough Scoring</span></b>: 1)
+                                        What is the rough score of this explanation in term of reasoning facts?
+                                    </strong>
+                                </div>
+                                <div class="row-12 pt-1 btn-group-container col-5">
+                                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                        <label class="btn btn-secondary btn-sm" for="-1">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_1"
+                                                autocomplete="off" value="-1" required>(1, Nonsensical Facts)
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="0">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_2"
+                                                autocomplete="off" value="0" required>(2, Irrelevant or Erroneous Facts)
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="1">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_3"
+                                                autocomplete="off" value="1" required>(3, Relevant but Insufficient
+                                            Facts)
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="-9">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_4"
+                                                autocomplete="off" value="-9" required>(4, Succinct yet Precise Facts)
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="-9">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_4"
+                                                autocomplete="off" value="-9" required>(5, Sufficient yet Precise Facts)
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="question-1" class="question">
+                            <div class="question-header question-choice-container pl-5 mb-2 pt-2 pb-2 border-bottom">
+                                <div class="row row-12 pl-3 pt-2">
+                                    <strong><b><span style="color:#008d4b;">First Stage, Rough Scoring</span></b>: 2)
+                                        What is the rough score of this explanation in term of reasoning structure?
+                                    </strong>
+                                </div>
+                                <div class="row-12 pt-1 btn-group-container col-5">
+                                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                        <label class="btn btn-secondary btn-sm" for="-1">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_1"
+                                                autocomplete="off" value="-1" required>(1, Chaotic Structure)
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="0">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_2"
+                                                autocomplete="off" value="0" required>(2, Elementary Structure)
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="1">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_3"
+                                                autocomplete="off" value="1" required>(3, Simple Structure)
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="-9">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_4"
+                                                autocomplete="off" value="-9" required>(4, Comprehensive Structure)
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="-9">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_4"
+                                                autocomplete="off" value="-9" required>(5, Comprehensive Structure With
+                                            Exception)
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="question-1" class="question">
+                            <div class="question-header question-choice-container pl-5 mb-2 pt-2 pb-2 border-bottom">
+                                <div class="row row-12 pl-3 pt-2">
+                                    <strong><b><span style="color:#008d4b;">Second Stage, Refined Scoring via
+                                                Comparison</span></b>: 1) What is the refined score of this explanation
+                                        in term of reasoning facts? </strong>
+                                </div>
+                                <div class="row-12 pt-1 btn-group-container col-5">
+                                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                        <label class="btn btn-secondary btn-sm" for="-1">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_1"
+                                                autocomplete="off" value="-1" required>(1, Nonsensical Facts)
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="-1">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_1"
+                                                autocomplete="off" value="-1" required>(1.5,)
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="0">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_2"
+                                                autocomplete="off" value="0" required>(2, Irrelevant or Erroneous Facts)
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="0">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_2"
+                                                autocomplete="off" value="0" required>(2.5, )
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="1">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_3"
+                                                autocomplete="off" value="1" required>(3, Relevant but Insufficient
+                                            Facts)
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="1">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_3"
+                                                autocomplete="off" value="1" required>(3.5, )
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="-9">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_4"
+                                                autocomplete="off" value="-9" required>(4, Succinct yet Precise Facts)
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="-9">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_4"
+                                                autocomplete="off" value="-9" required>(4.5, )
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="-9">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_4"
+                                                autocomplete="off" value="-9" required>(5, Sufficient yet Precise Facts)
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="question-1" class="question">
+                            <div class="question-header question-choice-container pl-5 mb-2 pt-2 pb-2 border-bottom">
+                                <div class="row row-12 pl-3 pt-2">
+                                    <strong><b><span style="color:#008d4b;">Second Stage, Refined Scoring via
+                                                Comparison</span></b>: 2) What is the refined score of this explanation
+                                        in term of reasoning structure? </strong>
+                                </div>
+                                <div class="row-12 pt-1 btn-group-container col-5">
+                                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                        <label class="btn btn-secondary btn-sm" for="-1">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_1"
+                                                autocomplete="off" value="-1" required>(1, Chaotic Structure)
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="-1">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_1"
+                                                autocomplete="off" value="-1" required>(1.5, )
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="0">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_2"
+                                                autocomplete="off" value="0" required>(2, Elementary Structure)
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="0">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_2"
+                                                autocomplete="off" value="0" required>(2.5, )
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="1">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_3"
+                                                autocomplete="off" value="1" required>(3, Simple Structure)
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="1">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_3"
+                                                autocomplete="off" value="1" required>(3.5, )
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="-9">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_4"
+                                                autocomplete="off" value="-9" required>(4, Comprehensive Structure)
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="-9">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_4"
+                                                autocomplete="off" value="-9" required>(4.5, )
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="-9">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_4"
+                                                autocomplete="off" value="-9" required>(5, Comprehensive Structure With
+                                            Exception)
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <b> 9 ${explanation_9} </b>
+                        <!-- <b>Part-1: First-Stage, Rough Scoring</b> -->
+                        <div id="question-1" class="question">
+                            <div class="question-header question-choice-container pl-5 mb-2 pt-2 pb-2 border-bottom">
+                                <div class="row row-12 pl-3 pt-2">
+                                    <strong><b><span style="color:#008d4b;">First Stage, Rough Scoring</span></b>: 1)
+                                        What is the rough score of this explanation in term of reasoning facts?
+                                    </strong>
+                                </div>
+                                <div class="row-12 pt-1 btn-group-container col-5">
+                                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                        <label class="btn btn-secondary btn-sm" for="-1">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_1"
+                                                autocomplete="off" value="-1" required>(1, Nonsensical Facts)
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="0">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_2"
+                                                autocomplete="off" value="0" required>(2, Irrelevant or Erroneous Facts)
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="1">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_3"
+                                                autocomplete="off" value="1" required>(3, Relevant but Insufficient
+                                            Facts)
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="-9">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_4"
+                                                autocomplete="off" value="-9" required>(4, Succinct yet Precise Facts)
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="-9">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_4"
+                                                autocomplete="off" value="-9" required>(5, Sufficient yet Precise Facts)
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="question-1" class="question">
+                            <div class="question-header question-choice-container pl-5 mb-2 pt-2 pb-2 border-bottom">
+                                <div class="row row-12 pl-3 pt-2">
+                                    <strong><b><span style="color:#008d4b;">First Stage, Rough Scoring</span></b>: 2)
+                                        What is the rough score of this explanation in term of reasoning structure?
+                                    </strong>
+                                </div>
+                                <div class="row-12 pt-1 btn-group-container col-5">
+                                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                        <label class="btn btn-secondary btn-sm" for="-1">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_1"
+                                                autocomplete="off" value="-1" required>(1, Chaotic Structure)
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="0">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_2"
+                                                autocomplete="off" value="0" required>(2, Elementary Structure)
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="1">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_3"
+                                                autocomplete="off" value="1" required>(3, Simple Structure)
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="-9">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_4"
+                                                autocomplete="off" value="-9" required>(4, Comprehensive Structure)
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="-9">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_4"
+                                                autocomplete="off" value="-9" required>(5, Comprehensive Structure With
+                                            Exception)
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="question-1" class="question">
+                            <div class="question-header question-choice-container pl-5 mb-2 pt-2 pb-2 border-bottom">
+                                <div class="row row-12 pl-3 pt-2">
+                                    <strong><b><span style="color:#008d4b;">Second Stage, Refined Scoring via
+                                                Comparison</span></b>: 1) What is the refined score of this explanation
+                                        in term of reasoning facts? </strong>
+                                </div>
+                                <div class="row-12 pt-1 btn-group-container col-5">
+                                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                        <label class="btn btn-secondary btn-sm" for="-1">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_1"
+                                                autocomplete="off" value="-1" required>(1, Nonsensical Facts)
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="-1">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_1"
+                                                autocomplete="off" value="-1" required>(1.5,)
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="0">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_2"
+                                                autocomplete="off" value="0" required>(2, Irrelevant or Erroneous Facts)
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="0">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_2"
+                                                autocomplete="off" value="0" required>(2.5, )
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="1">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_3"
+                                                autocomplete="off" value="1" required>(3, Relevant but Insufficient
+                                            Facts)
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="1">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_3"
+                                                autocomplete="off" value="1" required>(3.5, )
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="-9">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_4"
+                                                autocomplete="off" value="-9" required>(4, Succinct yet Precise Facts)
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="-9">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_4"
+                                                autocomplete="off" value="-9" required>(4.5, )
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="-9">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_4"
+                                                autocomplete="off" value="-9" required>(5, Sufficient yet Precise Facts)
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="question-1" class="question">
+                            <div class="question-header question-choice-container pl-5 mb-2 pt-2 pb-2 border-bottom">
+                                <div class="row row-12 pl-3 pt-2">
+                                    <strong><b><span style="color:#008d4b;">Second Stage, Refined Scoring via
+                                                Comparison</span></b>: 2) What is the refined score of this explanation
+                                        in term of reasoning structure? </strong>
+                                </div>
+                                <div class="row-12 pt-1 btn-group-container col-5">
+                                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                        <label class="btn btn-secondary btn-sm" for="-1">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_1"
+                                                autocomplete="off" value="-1" required>(1, Chaotic Structure)
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="-1">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_1"
+                                                autocomplete="off" value="-1" required>(1.5, )
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="0">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_2"
+                                                autocomplete="off" value="0" required>(2, Elementary Structure)
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="0">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_2"
+                                                autocomplete="off" value="0" required>(2.5, )
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="1">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_3"
+                                                autocomplete="off" value="1" required>(3, Simple Structure)
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="1">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_3"
+                                                autocomplete="off" value="1" required>(3.5, )
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="-9">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_4"
+                                                autocomplete="off" value="-9" required>(4, Comprehensive Structure)
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="-9">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_4"
+                                                autocomplete="off" value="-9" required>(4.5, )
+                                        </label>
+                                        <label class="btn btn-secondary btn-sm" for="-9">
+                                            <input class="required" type="radio" name="q1_valid" id="q1_valid_4"
+                                                autocomplete="off" value="-9" required>(5, Comprehensive Structure With
+                                            Exception)
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- OPTIONAL FEEDBACK -->
+                        <div class="row mt-5">
+                            <div class="col-8 offset-2 col-lg-6 offset-lg-3">
+                                <p>(Optional) Please let us know if anything was unclear, if you experienced any issues,
+                                    or if you have any other feedback for us.</p>
+                                <textarea id="feedback" name="feedback" rows=3></textarea>
+                            </div>
+                        </div>
+
+                        <!-- SUBMIT BUTTON -->
+                        <div class="row mt-5">
+                            <div class="col-2 offset-5">
+                                <input id="submitButton" onclick="getnext()" type="submit" value="Submit">
+                            </div>
+                        </div>
+
+            </form>
+            <script language='Javascript'>turkSetAssignmentID();</script>
+        </div>
+        <!-- MTURK INPUT END -->
+
+    </div>
+    <!-- HIT END -->
+
+    <!-- BOOSTRAP JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+    <!-- HITPUB JS -->
+    <script id="hitpub_js">
+        // TimeMe.js
+        (function () { var e, t; e = this, t = function () { var r = { startStopTimes: {}, idleTimeoutMs: 3e4, currentIdleTimeMs: 0, checkStateRateMs: 250, active: !1, idle: !1, currentPageName: "default-page-name", timeElapsedCallbacks: [], userLeftCallbacks: [], userReturnCallbacks: [], trackTimeOnElement: function (e) { var t = document.getElementById(e); t && (t.addEventListener("mouseover", function () { r.startTimer(e) }), t.addEventListener("mousemove", function () { r.startTimer(e) }), t.addEventListener("mouseleave", function () { r.stopTimer(e) }), t.addEventListener("keypress", function () { r.startTimer(e) }), t.addEventListener("focus", function () { r.startTimer(e) })) }, getTimeOnElementInSeconds: function (e) { var t = r.getTimeOnPageInSeconds(e); return t || 0 }, startTimer: function (e, t) { if (e || (e = r.currentPageName), void 0 === r.startStopTimes[e]) r.startStopTimes[e] = []; else { var n = r.startStopTimes[e], i = n[n.length - 1]; if (void 0 !== i && void 0 === i.stopTime) return } r.startStopTimes[e].push({ startTime: t || new Date, stopTime: void 0 }), r.active = !0, r.idle = !1 }, stopAllTimers: function () { for (var e = Object.keys(r.startStopTimes), t = 0; t < e.length; t++)r.stopTimer(e[t]) }, stopTimer: function (e, t) { e || (e = r.currentPageName); var n = r.startStopTimes[e]; void 0 !== n && 0 !== n.length && (void 0 === n[n.length - 1].stopTime && (n[n.length - 1].stopTime = t || new Date), r.active = !1) }, getTimeOnCurrentPageInSeconds: function () { return r.getTimeOnPageInSeconds(r.currentPageName) }, getTimeOnPageInSeconds: function (e) { var t = r.getTimeOnPageInMilliseconds(e); return void 0 === t ? void 0 : t / 1e3 }, getTimeOnCurrentPageInMilliseconds: function () { return r.getTimeOnPageInMilliseconds(r.currentPageName) }, getTimeOnPageInMilliseconds: function (e) { var t = r.startStopTimes[e]; if (void 0 !== t) { for (var n = 0, i = 0; i < t.length; i++) { var s = t[i].startTime, o = t[i].stopTime; void 0 === o && (o = new Date), n += o - s } return Number(n) } }, getTimeOnAllPagesInSeconds: function () { for (var e = [], t = Object.keys(r.startStopTimes), n = 0; n < t.length; n++) { var i = t[n], s = r.getTimeOnPageInSeconds(i); e.push({ pageName: i, timeOnPage: s }) } return e }, setIdleDurationInSeconds: function (e) { var t = parseFloat(e); if (!1 !== isNaN(t)) throw { name: "InvalidDurationException", message: "An invalid duration time (" + e + ") was provided." }; return r.idleTimeoutMs = 1e3 * e, this }, setCurrentPageName: function (e) { return r.currentPageName = e, this }, resetRecordedPageTime: function (e) { delete r.startStopTimes[e] }, resetAllRecordedPageTimes: function () { for (var e = Object.keys(r.startStopTimes), t = 0; t < e.length; t++)r.resetRecordedPageTime(e[t]) }, resetIdleCountdown: function () { r.idle && r.triggerUserHasReturned(), r.idle = !1, r.currentIdleTimeMs = 0 }, callWhenUserLeaves: function (e, t) { this.userLeftCallbacks.push({ callback: e, numberOfTimesToInvoke: t }) }, callWhenUserReturns: function (e, t) { this.userReturnCallbacks.push({ callback: e, numberOfTimesToInvoke: t }) }, triggerUserHasReturned: function () { if (!r.active) for (var e = 0; e < this.userReturnCallbacks.length; e++) { var t = this.userReturnCallbacks[e], n = t.numberOfTimesToInvoke; (isNaN(n) || void 0 === n || 0 < n) && (t.numberOfTimesToInvoke -= 1, t.callback()) } r.startTimer() }, triggerUserHasLeftPage: function () { if (r.active) for (var e = 0; e < this.userLeftCallbacks.length; e++) { var t = this.userLeftCallbacks[e], n = t.numberOfTimesToInvoke; (isNaN(n) || void 0 === n || 0 < n) && (t.numberOfTimesToInvoke -= 1, t.callback()) } r.stopAllTimers() }, callAfterTimeElapsedInSeconds: function (e, t) { r.timeElapsedCallbacks.push({ timeInSeconds: e, callback: t, pending: !0 }) }, checkState: function () { for (var e = 0; e < r.timeElapsedCallbacks.length; e++)r.timeElapsedCallbacks[e].pending && r.getTimeOnCurrentPageInSeconds() > r.timeElapsedCallbacks[e].timeInSeconds && (r.timeElapsedCallbacks[e].callback(), r.timeElapsedCallbacks[e].pending = !1); !1 === r.idle && r.currentIdleTimeMs > r.idleTimeoutMs ? (r.idle = !0, r.triggerUserHasLeftPage()) : r.currentIdleTimeMs += r.checkStateRateMs }, visibilityChangeEventName: void 0, hiddenPropName: void 0, listenForVisibilityEvents: function () { void 0 !== document.hidden ? (r.hiddenPropName = "hidden", r.visibilityChangeEventName = "visibilitychange") : void 0 !== document.mozHidden ? (r.hiddenPropName = "mozHidden", r.visibilityChangeEventName = "mozvisibilitychange") : void 0 !== document.msHidden ? (r.hiddenPropName = "msHidden", r.visibilityChangeEventName = "msvisibilitychange") : void 0 !== document.webkitHidden && (r.hiddenPropName = "webkitHidden", r.visibilityChangeEventName = "webkitvisibilitychange"), document.addEventListener(r.visibilityChangeEventName, function () { document[r.hiddenPropName] ? r.triggerUserHasLeftPage() : r.triggerUserHasReturned() }, !1), window.addEventListener("blur", function () { r.triggerUserHasLeftPage() }), window.addEventListener("focus", function () { r.triggerUserHasReturned() }), document.addEventListener("mousemove", function () { r.resetIdleCountdown() }), document.addEventListener("keyup", function () { r.resetIdleCountdown() }), document.addEventListener("touchstart", function () { r.resetIdleCountdown() }), window.addEventListener("scroll", function () { r.resetIdleCountdown() }), setInterval(function () { r.checkState() }, r.checkStateRateMs) }, websocket: void 0, websocketHost: void 0, setUpWebsocket: function (e) { if (window.WebSocket && e) { var t = e.websocketHost; try { r.websocket = new WebSocket(t), window.onbeforeunload = function () { r.sendCurrentTime(e.appId) }, r.websocket.onopen = function () { r.sendInitWsRequest(e.appId) }, r.websocket.onerror = function (e) { console && console.log("Error occurred in websocket connection: " + e) }, r.websocket.onmessage = function (e) { console && console.log(e.data) } } catch (e) { console && console.error("Failed to connect to websocket host.  Error:" + e) } } return this }, websocketSend: function (e) { r.websocket.send(JSON.stringify(e)) }, sendCurrentTime: function (e) { var t = { type: "INSERT_TIME", appId: e, timeOnPageMs: r.getTimeOnCurrentPageInMilliseconds(), pageName: r.currentPageName }; r.websocketSend(t) }, sendInitWsRequest: function (e) { var t = { type: "INIT", appId: e }; r.websocketSend(t) }, initialize: function (e) { var t = r.idleTimeoutMs || 30, n = r.currentPageName || "default-page-name", i = void 0, s = void 0; e && (t = e.idleTimeoutInSeconds || t, n = e.currentPageName || n, i = e.websocketOptions, s = e.initialStartTime), r.setIdleDurationInSeconds(t).setCurrentPageName(n).setUpWebsocket(i).listenForVisibilityEvents(), r.startTimer(void 0, s) } }; return r }, "undefined" != typeof module && module.exports ? module.exports = t() : "function" == typeof define && define.amd ? define([], function () { return e.TimeMe = t() }) : e.TimeMe = t() }).call(this);
+
+        TimeMe.initialize({
+            currentPageName: "task",
+            idleTimeoutInSeconds: 30
+        });
+
+        $(document).ready(function () {
+            $('#submitButton').click(function () {
+                try {
+                    $('input[name=ee]').attr('value', TimeMe.getTimeOnCurrentPageInSeconds());
+                } catch {
+                }
+                return true;
+            });
+        });
+
+    </script>
