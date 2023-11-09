@@ -251,62 +251,128 @@
 
                             <b><p class="mb-2">You will read multiple-choice questions about daily life. For each question, an answer has been selected and 9 explanations for the answer have been given. <br><br>
                                 Your task is to judge score each explanation in term of reasoning facts and reasoning structure in two-stage way</b></p>
+                                <br>
+                                <p class="mb-2" style="margin-left: 40px"><b>Each HIT contains 3 parts:</b>
+                                <div class="legend" style="margin-left: 40px">
+                                    <div class="row"><span class="label col-3"><span class="concept_a">Question</span></span><span class="col-9">A question such as "If a lantern is not for sale, where is it likely to be?"</span></div>
+                                    <div class="row"><span class="label col-3"><span class="concept_c">Answer</span></span><span class="col-9">A selected answer, such as "house" (may or may not be correct).</span></div>
+                                    <div class="row"><span class="label col-3"><span class="concept_d">Explanations</span></span><span class="col-9">Nive explanations for the <span class="concept_c">Answer</span>.</span></div>
+                                </div></p>
+
                             <p> <b>In the first stage</b>, you will need to initially score each explanation in term of reasoning facts and reasoning structure via five-tier scoring schema as the following:</p>
                                 <li><b>Reasoning Facts</b>:  Regarding quantity and quality of facts support reasoning, our reasoning facts scoring system prioritizes quality over quantity 
                                     and is scored from 1 to 5 including Nonsensical Facts, Irrelevant or Erroneous Facts, Relevant but Insufficient Facts, Succinct yet Precise Facts and Sufficient and Precise Facts.</li>
-                                <li><b>Reasoning structure</b>: Regarding how well handles belief revisions in the face of conflicting information, our reasoning structure scoring system 
+                                <li><b>Reasoning structure</b>: Regarding how well handles belief revisions in the face of conflicting information, our reasoning structure scoring system introduces a hierarchical system to manage complex structures
                                     and is scored from 1 to 5 including Chaotic Structure, Elementary Structure, Simple Structure, Comprehensive Structure, and Comprehensive with Exception Structure.</li>
                             <p> <b>In the second stage</b>, you will need to refine your score subsequent to initial scoring, annotators refine scores through pairwise comparisons of explanations with identical initial scores. 
                                     Specifically when explanation E1 is considered superior to explanation E2 concerning reasoning structure or facts, the score of E1 is incremented by 0.5 in the pertinent aspect.</p>
                                     
-                            <br>
-                            <p class="mb-2" style="margin-left: 40px"><b>Each HIT contains 3 parts:</b>
-                            <div class="legend" style="margin-left: 40px">
-                                <div class="row"><span class="label col-3"><span class="concept_a">Question</span></span><span class="col-9">A question such as "If a lantern is not for sale, where is it likely to be?"</span></div>
-                                <div class="row"><span class="label col-3"><span class="concept_c">Answer</span></span><span class="col-9">A selected answer, such as "house" (may or may not be correct).</span></div>
-                                <div class="row"><span class="label col-3"><span class="concept_d">Explanations</span></span><span class="col-9">Nive explanations for the <span class="concept_c">Answer</span>.</span></div>
-                            </div></p>
-
-
-                        <p> Annotation Instructions:</p>
-                        <ul>
+                        <p> <b>Annotation Instructions:</b> </p>
+                        <ul> We will illustrate the following 5-Tier Reasoning Facts and Structure Scoring System with the <span style="color:#eb1101;"><b>question</b></span> "Where is cheese likely to be dangerous for some creatures?" <span style="color:#6e01eb;"><b>answered</b></span> by
+                            "mouse trap".
                             <!-- 5-Tier Reasoning Facts Scoring System. The system captures reasoning
                             facts, illustrated with the question “Where is cheese likely to be dangerous for some creatures?” answered by
                             “mouse trap”. Fact represents irrelevant or erroneous fact; Fact represents precise fact; Fact represents nonsensical
                             fact.  -->
                             <!-- <span style="color:#3401eb;">New!</span> -->
-                            <li> 5-Tier Reasoning Facts Scoring System
+                            <li> <b>5-Tier Reasoning Facts Scoring System</b>
                                  <!-- illustrated with the question “Where is cheese likely to be dangerous for some creatures?” answered by “mouse trap”. -->
-                            <ul> <li>(1, Nonsensical Facts): mean that are nonsensical and devoid
+                            <ul> <li><b>(1, Nonsensical Facts)</b>: Being nonsensical and devoid
                                 of any significance to support the reasoning process or the explanation.
-                                For example, "mouse wiki.".</li>
-                                <li>(2, Irrelevant or Erroneous Facts): Providing domain knowledge to 
-                                    support the reasoning process can be irrelevant or erroneous.</li> 
-                                <li>(3, Relevant but Insufficient Facts): Provide domain knowledge that supports the reasoning process, 
-                                    though it may be relevant but not precisely apt or insufficiently supported.</li>
-                                <li>(4, Succinct yet Precise Facts): Provide succinct yet precise domain knowledge to
-                                    support the reasoning process.</li>
-                                <li>(5, Sufficient yet Precise Facts): Provide domain knowledge that is both sufficient and
-                                    accurately relevant to support the reasoning process. </li>
+
+                               <br>For example, <b>explanation</b>  <span style="color:#6e01eb;">"mouse wiki."</span> 
+                               contains nonsenical and chaotic facts.</li>
+                                <li><b>(2, Irrelevant or Erroneous Facts)</b>: Providing domain knowledge to 
+                                    support the reasoning process can be irrelevant or erroneous. 
+                                    For example, <b>explanation</b> "<span style="color:#eb1101;">Fact0{mouse does not like cheese}</span>, 
+                                    hence it is not dangerous for mice" contains erroneous fact 
+                                    <span style="color:#eb1101;">Fact0</span>. </li> 
+                                <li><b>(3, Relevant but Insufficient Facts</b>): Providing domain knowledge that supports the reasoning process, 
+                                    though it may be relevant but not precisely apt or insufficiently supported. 
+                                    
+                                    <br>For example, <b>explanation</b> "<span style="color:#eb1101;">Fact0{it is often used as bait}</span>" 
+                                    give basic facts <span style="color:#eb1101;">Fact0</span> supporting this reasoning process but 
+                                    without more detail facts.</li>
+                                <li><b>(4, Succinct yet Precise Facts)</b>: Providing succinct yet precise domain knowledge to
+                                    support the reasoning process. 
+                                    
+                                    <br>For example, 
+                                    <b>explanation</b> "<span style="color:#eb1101;">Fact0 :{cheese has been said to attract mice.}</span> 
+                                    <span style="color:#5b01eb;">Fact1:{Mice traps may contain cheese}</span> in order to attract them."
+                                    contains precise facts <span style="color:#eb1101;">Fact0</span> and <span style="color:#5b01eb;">Fact1</span> 
+                                    well suporting reasoning process from the qeustion to answer.</li>
+                                <li><b>(5, Sufficient yet Precise Facts)</b>: Providing domain knowledge that is both sufficient and
+                                    accurately relevant to support the reasoning process. 
+                                    
+                                    <br>For example, <b>explanation</b> "<span style="color:#eb1101;">Fact0:{Cheese is used as bait}</span> to 
+                                    <span style="color:#5b01eb;">Fact1:{lure small creatures, like mice}</span>, to a mouse trap. 
+                                    In this context, <span style="color:#eb1101;">Fact2:{cheese is dangerous for the mice}</span>, as
+                                        <span style="color:#5b01eb;">Fact3:{its presence would indicate the presence of a
+                                        mouse trap.}</span>" contains sufficient and precise facts
+                                         <span style="color:#eb1101;">Fact0</span>, 
+                                         <span style="color:#5b01eb;">Fact1</span>, 
+                                         <span style="color:#eb1101;">Fact2</span>,
+                                         and <span style="color:#5b01eb;">Fact3</span>.</li>
                                 <!-- <li>You may disagree with the <span class="concept_c">Answer</span>, but you should pretend it is correct when judging the <span class="concept_d">Explanations</span>.</li>
                                 <li>Some sentences have minor grammar and spelling mistakes, don't end on a period, or cut off partway through because they are long. Please ignore these, and judge on the part of the sentence that is presented.</li>
                                 <li><span style="color:#eb1101;">New!</span> If at least <it>part</it> of the explanation is acceptable and sufficient (even if some other part is nonsensical or rambling), please mark is as acceptable.</li> -->
                             
                             </ul></li>
 
-                            <li> 5-Tier Reasoning Structure Scoring System
-                            <ul> <li>(1, Chaotic Structure): The reasoning process provided is chaotic and
-                                meaningless, lacking any trace of applied reasoning skills. </li>
-                                <li>(2, Elementary Structure): The system only provides a statement, and the
+                            <li> <b>5-Tier Reasoning Structure Scoring System</b>
+                            <ul> <li><b>(1, Chaotic Structure)</b>: The reasoning process provided is chaotic and
+                                meaningless, lacking any trace of applied reasoning skills. 
+                                
+                                <br>For example, <b>explanation</b> <span style="color:#6e01eb;">"mouse wiki."</span> 
+                                does not dmemonstrate any reasoning structure or skill.</li>
+                                <li><b>(2, Elementary Structure)</b>: The system only provides a statement, and the
                                     subsequent inference process needs to be supplemented by individual cognitive reasoning, 
-                                    which belongs to default reasoning or one-step reasoning. </li>
-                                <li>(3, Simple Structure): Upon making a statement, subsequent inferences are made. However, the reasoning
-                                    chain seems somewhat rough, including missing or more detailed links in the reasoning chain. </li>
-                                <li>(4, Comprehensive Structure): A more comprehensive and sufficient reasoning process is provided, wherein detailed
-                                    reasoning steps exist within broader reasoning segments. </li>
-                                <li>(5, Comprehensive With Exception Structure): The reasoning process is more comprehensive and detailed, 
+                                    which belongs to default reasoning or one-step reasoning. For example, <b>explanation</b> 
+                                    <span style="color:#6e01eb;">"S0:{it is often used as bait}"</span> 
+                                    demonstrates one-step reasoning expressed as one statement. </li>
+                                <li><b>(3, Simple Structure)</b>: Upon making a statement, subsequent inferences are made. However, the reasoning
+                                    chain seems somewhat rough, including missing or more detailed links in the reasoning chain. 
+                                    
+                                    <br>For example, <b>explanation</b> "<span style="color:#6e01eb;">S0:{Cheese has been said to attract mice}</span>. 
+                                    <span style="color:#eb1101;">S1:{Mouse traps may
+                                        contain cheese in order to attract them.}</span>" demonstrated as 
+                                        two-step reasoning consisiting of <span style="color:#6e01eb;">S0</span> 
+                                        and <span style="color:#eb1101;">S1</span>.
+                                    </li>
+                                <li><b>(4, Comprehensive Structure)</b>: A more comprehensive and sufficient reasoning process is provided, wherein detailed
+                                    reasoning steps exist within broader reasoning segments. 
+                                    
+                                    <br>For example, <b>explanation</b> 
+                                    "<span style="color:#6e01eb;">S0:{<span style="color:#eb1101;">s00:{Cheese is utilized as a lure}</span> 
+                                    s01:{to attract diminutive creatures, such as mice, into a mousetrap.}}</span> 
+                                    In this particular context, 
+                                    <span style="color:#eb1101;">S1:{
+                                        <span style="color:#6e01eb;">s10:{cheese poses a danger to the mice,}</span> 
+                                    as s11:{its presence tends to signify the existence of a mousetrap.}}</span>" 
+                                    consist of two-rough steps of 
+                                    <span style="color:#6e01eb;">S0</span> and 
+                                    <span style="color:#eb1101;">S1</span>, 
+                                    and each of the rough step consist of two detail steps that 
+                                    <span style="color:#6e01eb;">S0</span> is composed of 
+                                    <span style="color:#eb1101;">s00</span> and <span style="color:#6e01eb;">s01</span>, and 
+                                    <span style="color:#eb1101;">S1</span> is composed of 
+                                    <span style="color:#6e01eb;">s10</span> and <span style="color:#eb1101;">s11</span>.</li>
+                                <li><b>(5, Comprehensive With Exception Structure)</b>: The reasoning process is more comprehensive and detailed, 
                                     incorporating finer reasoning within the larger reasoning steps, and taking into account exceptions or discussing different
-                                    scenarios, thus displaying the comprehensiveness of the reasoning. </li>
+                                    scenarios, thus displaying the comprehensiveness of the reasoning. 
+                                    
+                                    <br>For example, <b>explanation</b> "<span style="color:#6e01eb;">S0:{Mouse traps are designed to trap and kill mice}</span>, and
+                                    <span style="color:#eb1101;">S1:{<span style="color:#6e01eb;">s10:{since cheese is a common bait for mouse traps,}</span> 
+                                    s11:{it poses a danger to mice who might try to eat it.}}</span> 
+                                    However, <b>exception</b> <span style="color:#6e01eb;">S2:{
+                                        <span style="color:#eb1101;">s20:{cheese might not be dangerous}</span> for 
+                                        s21:{other creatures that are not susceptible to being trapped by mouse traps.}</span>" 
+                                        consists of three rough steps including 
+                                        <span style="color:#6e01eb;">S0</span>, 
+                                        <span style="color:#eb1101;">S1</span> and 
+                                        <span style="color:#6e01eb;">S2</span>, each of which also is composed of detail step. 
+                                        Moreover, <span style="color:#6e01eb;">S2</span> is demonstrated as one exception step, which discusses the exception case.
+                                    </li>
                                 <!-- <li>You may disagree with the <span class="concept_c">Answer</span>, but you should pretend it is correct when judging the <span class="concept_d">Explanations</span>.</li>
                                 <li>Some sentences have minor grammar and spelling mistakes, don't end on a period, or cut off partway through because they are long. Please ignore these, and judge on the part of the sentence that is presented.</li>
                                 <li><span style="color:#eb1101;">New!</span> If at least <it>part</it> of the explanation is acceptable and sufficient (even if some other part is nonsensical or rambling), please mark is as acceptable.</li> -->
@@ -318,7 +384,7 @@
             </div>
             <!-- INSTRUCTIONS END -->
             <!-- EXAMPLES START -->
-            <div class="card">
+            <!-- <div class="card">
                 <div class="card-header" id="examplesHeading">
                     <h5 class="mb-0">
                         <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#examples" aria-expanded="true" aria-controls="examples">
@@ -333,7 +399,7 @@
 
                             <!-- EXAMPLE MACRO END -->
 
-                            <div id="example-1" class="question">
+                            <!-- <div id="example-1" class="question">
                                 <div class="question-header question-choice-container pl-5 mb-2 pt-2 pb-2 border-bottom">
 
                                     <div style="border: 5px solid #00aeef; padding: 10px 20px 10px 20px;"><b>Example #1:</b></div><br>
@@ -440,8 +506,8 @@
                     </div>
                 </div>
             </div>
-        </div>
-            <!-- EXAMPLES END -->
+        </div> -->
+        <!-- EXAMPLES END --> 
         <!-- ACCORDION END -->
 
         <!-- MTURK INPUT START -->
