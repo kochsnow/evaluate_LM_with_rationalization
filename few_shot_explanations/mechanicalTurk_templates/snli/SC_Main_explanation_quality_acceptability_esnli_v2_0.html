@@ -249,17 +249,28 @@
                         <div class="card-content">
                             <p>Thanks for participating in this HIT!</p>
 
-                            <b><p class="mb-2">You will read multiple-choice questions about daily life. For each question, an answer has been selected and 9 explanations for the answer have been given. 
-                                <br><br>
-                                <span style="color:#eb1101;">Your task is to judge score each explanation in term of reasoning facts and reasoning structure in two-stage way</span></b></p>
-                                <br>
-                                <p class="mb-2" style="margin-left: 40px"><b>Each HIT contains 3 parts:</b>
-                                <div class="legend" style="margin-left: 40px">
-                                    <div class="row"><span class="label col-3"><span class="concept_a">Question</span></span><span class="col-9">A question such as "If a lantern is not for sale, where is it likely to be?"</span></div>
-                                    <div class="row"><span class="label col-3"><span class="concept_c">Answer</span></span><span class="col-9">A selected answer, such as "house" (may or may not be correct).</span></div>
-                                    <div class="row"><span class="label col-3"><span class="concept_d">Explanations</span></span><span class="col-9">Nive explanations for the <span class="concept_c">Answer</span>.</span></div>
-                                </div></p>
+                            <p class="mb-2"><b>An AI System has performed a task called natural language inference. The system has predicted an answer describing the relationship between two sentences, and then given a statement explaining the answer. 
+                            </p></em></b></p>
+                            <!-- <br><br> -->
+                            <span style="color:#eb1101;"><b>Your task is to judge score each explanation in term of reasoning facts and reasoning structure in two-stage way.</b></span>
+                            <br>
+                            <!-- <div style="border: 5px solid #00aeef; padding: 10px 20px 10px 20px;"><b>Part 1:</b> Please read the <b>statement</b> and answer questions related to its factuality and grammaticality (2 questions).</div><br> -->
+                            <!-- <div style="border: 5px solid #00aeef; padding: 10px 20px 10px 20px;"><b>Part 2:</b> Please read the <b>instance</b> that the statement explains and answer questions about the explanation quality (1-3 questions).</p></div><br> -->
+                            <!-- <p class="mb-2" style="margin-left: 40px"><b>An instance contains 4 parts:</b> -->
+                            <div class="legend" style="margin-left: 40px">
+                                <div class="row"><span class="label col-3"><span class="concept_a">Premise</span></span><span class="col-9">Sentence describing a real-world situation, always assumed to be true.</span></div>
+                                <div class="row"><span class="label col-3"><span class="concept_b">Hypothesis</span></span><span class="col-9"> An assumption or inference that we might make about the situation having read the premise. </span></div>
+                                <div class="row"><span class="label col-3"><span class="concept_c">Relationship</span></span><span class="col-9">Whether the <span class="concept_b">Hypothesis</span> assumption or inference is valid given the <span class="concept_a">Premise</span>.</span></div>
+                                <div class="row"><span class="label col-3"><span class="concept_d">Explanation</span></span><span class="col-9">The <b>statement</b> which explains the <span class="concept_c">Relationship</span>.</span></div>
+                            </div></p>
 
+                            <p class="mb-2"><b>There are 3 possible <span class="concept_c">Relationships</span>:</b>
+                                <div class="legend">
+                                    <div class="row"><span class="label col-3">true</span><span class="col-9">The hypothesis is <b>assumed or implied</b> from the premise.</span></div>
+                                    <div class="row"><span class="label col-3">false</span><span class="col-9">The hypothesis is <b>not assumed or implied</b> from the premise. It <b>contradicts</b> the premise.</span></div>
+                                    <div class="row"><span class="label col-3">neither</span><span class="col-9">The hypothesis is <b>possible from the premise, but not directly implied or contradicted</b>. More context is needed.</span></div>
+                                </div></p>
+                                
                             <p> <b>In the first stage</b>, you will need to initially score each explanation in term of reasoning facts and reasoning structure via five-tier scoring schema as the following:</p>
                                 <li><b>Reasoning Facts</b>:  Regarding quantity and quality of facts support reasoning, our reasoning facts scoring system prioritizes quality over quantity 
                                     and is scored from 1 to 5 including Nonsensical Facts, Irrelevant or Erroneous Facts, Relevant but Insufficient Facts, Succinct yet Precise Facts and Sufficient and Precise Facts.</li>
@@ -269,8 +280,13 @@
                                     Specifically when explanation E1 is considered superior to explanation E2 concerning reasoning structure or facts, the score of E1 is incremented by 0.5 in the pertinent aspect.</p>
                                     
                         <p> <b>Annotation Instructions:</b> </p>
-                        <ul> We will illustrate the following 5-Tier Reasoning Facts and Structure Scoring System with the <span style="color:#eb1101;"><b>question</b></span> "Where is cheese likely to be dangerous for some creatures?" <span style="color:#6e01eb;"><b>answered</b></span> by
-                            "mouse trap".
+                        <ul> We will illustrate the following 5-Tier Reasoning Facts and Structure Scoring System with one example that given 
+                            <span style="color:#6e01eb;"><b>hypothesis</b></span> "The man is wet" and 
+                            <span style="color:#eb1101;"><b>premise</b></span> "Man in white shirt getting sprayed by water.", 
+                            explain why the <span style="color:#6e01eb;"><b>relation</b></span> is "entailment".
+                            
+                            <!-- with the <span style="color:#eb1101;"><b>question</b></span> "Where is cheese likely to be dangerous for some creatures?" <span style="color:#6e01eb;"><b>answered</b></span> by -->
+                            <!-- "mouse trap". -->
                             <!-- 5-Tier Reasoning Facts Scoring System. The system captures reasoning
                             facts, illustrated with the question “Where is cheese likely to be dangerous for some creatures?” answered by
                             “mouse trap”. Fact represents irrelevant or erroneous fact; Fact represents precise fact; Fact represents nonsensical
@@ -281,39 +297,41 @@
                             <ul> <li><b>(1, Nonsensical Facts)</b>: Being nonsensical and devoid
                                 of any significance to support the reasoning process or the explanation.
 
-                               <br><b>For example, explanation</b>  <span style="color:#6e01eb;">"mouse wiki."</span> 
+                               <br><b>For example, explanation</b>  <span style="color:#6e01eb;">"Category: Essays."</span> 
                                contains nonsenical and chaotic facts.</li>
 
                                 <li><b>(2, Irrelevant or Erroneous Facts)</b>: Providing domain knowledge to 
                                     support the reasoning process can be irrelevant or erroneous. 
 
-                                    <br><b>For example, explanation</b> "<span style="color:#eb1101;">Fact0{mouse does not like cheese}</span>, 
-                                    hence it is not dangerous for mice" contains erroneous fact 
+                                    <br><b>For example, explanation</b> "<span style="color:#eb1101;"> If a man is getting sprayed by water, Fact0{then he is most likely wet.}</span>, 
+                                    " contains irrelevant or erroneous fact 
                                     <span style="color:#eb1101;">Fact0</span>. </li> 
 
                                 <li><b>(3, Relevant but Insufficient Facts</b>): Providing domain knowledge that supports the reasoning process, 
                                     though it may be relevant but not precisely apt or insufficiently supported. 
                                     
-                                    <br><b>For example, explanation</b> "<span style="color:#eb1101;">Fact0{it is often used as bait}</span>" 
+                                    <br><b>For example, explanation</b> "<span style="color:#eb1101;">If a man is getting sprayed by water, Fact0{he is wet.}</span>" 
                                     give basic facts <span style="color:#eb1101;">Fact0</span> supporting this reasoning process but 
                                     without more detail facts.</li>
 
                                 <li><b>(4, Succinct yet Precise Facts)</b>: Providing succinct yet precise domain knowledge to
                                     support the reasoning process. 
                                     
-                                    <br><b>For example, explanation</b> "<span style="color:#eb1101;">Fact0 :{cheese has been said to attract mice.}</span> 
-                                    <span style="color:#5b01eb;">Fact1:{Mice traps may contain cheese}</span> in order to attract them."
+                                    <br><b>For example, explanation</b> "<span style="color:#eb1101;">Fact0 :{If someone is getting sprayed by water, they are likely to get wet.}</span> 
+                                    Therefore,<span style="color:#5b01eb;">Fact1:{ the man in the white shirt is likely to be wet.}</span> "
                                     contains precise facts <span style="color:#eb1101;">Fact0</span> and <span style="color:#5b01eb;">Fact1</span> 
                                     well suporting reasoning process from the qeustion to answer.</li>
 
                                 <li><b>(5, Sufficient yet Precise Facts)</b>: Providing domain knowledge that is both sufficient and
                                     accurately relevant to support the reasoning process. 
                                     
-                                    <br><b>For example, explanation</b> "<span style="color:#eb1101;">Fact0:{Cheese is used as bait}</span> to 
-                                    <span style="color:#5b01eb;">Fact1:{lure small creatures, like mice}</span>, to a mouse trap. 
-                                    In this context, <span style="color:#eb1101;">Fact2:{cheese is dangerous for the mice}</span>, as
-                                        <span style="color:#5b01eb;">Fact3:{its presence would indicate the presence of a
-                                        mouse trap.}</span>" contains sufficient and precise facts
+                                    <br><b>For example, explanation</b> "The given hypothesis and premise entail one another 
+                                    because the basis of one is included in the other.
+                                    <span style="color:#eb1101;">Fact0:{The given hypothesis and premise entail one another because the basis of one is included in the other.}</span>
+                                    <span style="color:#5b01eb;">Fact1:{A directly relative subject involved with this statement is the man in the white shirt}</span>, mentioned in the premise.
+                                    In this context, the premise includes information that shows 
+                                    <span style="color:#eb1101;">Fact2:{the origin of the man's wetness: he is being sprayed by water.}</span> Hence, 
+                                    <span style="color:#5b01eb;">Fact3:{the water that just sprayed the man in white shirt is a direct contributor to the man being wet. }</span>" contains sufficient and precise facts
                                          <span style="color:#eb1101;">Fact0</span>, 
                                          <span style="color:#5b01eb;">Fact1</span>, 
                                          <span style="color:#eb1101;">Fact2</span>,
@@ -327,22 +345,21 @@
                             <li> <b>5-Tier Reasoning Structure Scoring System</b>
                             <ul> <li><b>(1, Chaotic Structure)</b>: The reasoning process provided is chaotic and
                                 meaningless, lacking any trace of applied reasoning skills. 
-                                <br><b>For example, explanation</b> <span style="color:#6e01eb;">"mouse wiki."</span> 
+                                <br><b>For example, explanation</b> <span style="color:#6e01eb;">"Category: Essays."</span> 
                                 does not dmemonstrate any reasoning structure or skill.</li>
 
                                 <li><b>(2, Elementary Structure)</b>: The system only provides a statement, and the
                                     subsequent inference process needs to be supplemented by individual cognitive reasoning, 
                                     which belongs to default reasoning or one-step reasoning. 
                                 <br><b>For example, explanation</b> 
-                                    <span style="color:#6e01eb;">"S0:{it is often used as bait}"</span> 
+                                    <span style="color:#6e01eb;">"S0:{being sprayed by water implies being wet.}"</span> 
                                     demonstrates one-step reasoning expressed as one statement. </li>
 
                                 <li><b>(3, Simple Structure)</b>: Upon making a statement, subsequent inferences are made. However, the reasoning
                                     chain seems somewhat rough, including missing or more detailed links in the reasoning chain. 
                                     
-                                    <br><b>For example, explanation</b> "<span style="color:#6e01eb;">S0:{Cheese has been said to attract mice}</span>. 
-                                    <span style="color:#eb1101;">S1:{Mouse traps may
-                                        contain cheese in order to attract them.}</span>" demonstrated as 
+                                    <br><b>For example, explanation</b> "<span style="color:#6e01eb;">S0:{ If a man is getting sprayed by water}</span>. 
+                                    <span style="color:#eb1101;">S1:{, then he is most likely wet.}</span>" demonstrated as 
                                         two-step reasoning consisiting of <span style="color:#6e01eb;">S0</span> 
                                         and <span style="color:#eb1101;">S1</span>.
                                     </li>
@@ -351,12 +368,14 @@
                                     reasoning steps exist within broader reasoning segments. 
                                     
                                     <br><b>For example, explanation</b> 
-                                    "<span style="color:#6e01eb;">S0:{<span style="color:#eb1101;">s00:{Cheese is utilized as a lure}</span> 
-                                    s01:{to attract diminutive creatures, such as mice, into a mousetrap.}}</span> 
-                                    In this particular context, 
+                                    "<span style="color:#6e01eb;">S0:{<span style="color:#eb1101;">
+                                    s00:{The relation is entailment between the hypothesis "the man is wet" 
+                                    and the premise "man in white shirt getting sprayed by water"}</span> beacuse
+                                    s01:{ the premise confirms the hypothesis that the man is wet}}</span> 
                                     <span style="color:#eb1101;">S1:{
-                                        <span style="color:#6e01eb;">s10:{cheese poses a danger to the mice,}</span> 
-                                    as s11:{its presence tends to signify the existence of a mousetrap.}}</span>" 
+                                        <span style="color:#6e01eb;">
+                                    s10:{ The hypothesis states that the man is wet, }</span> 
+                                    s11:{which implies that he is getting sprayed by water.}}</span>" 
                                     consist of two-rough steps of 
                                     <span style="color:#6e01eb;">S0</span> and 
                                     <span style="color:#eb1101;">S1</span>, 
@@ -370,16 +389,22 @@
                                     incorporating finer reasoning within the larger reasoning steps, and taking into account exceptions or discussing different
                                     scenarios, thus displaying the comprehensiveness of the reasoning. 
                                     
-                                    <br><b>For example, explanation</b> "<span style="color:#6e01eb;">S0:{Mouse traps are designed to trap and kill mice}</span>, and
-                                    <span style="color:#eb1101;">S1:{<span style="color:#6e01eb;">s10:{since cheese is a common bait for mouse traps,}</span> 
-                                    s11:{it poses a danger to mice who might try to eat it.}}</span> 
-                                    However, <b>exception</b> <span style="color:#6e01eb;">S2:{
-                                        <span style="color:#eb1101;">s20:{cheese might not be dangerous}</span> for 
-                                        s21:{other creatures that are not susceptible to being trapped by mouse traps.}</span>" 
-                                        consists of three rough steps including 
+                                    <br><b>For example, explanation</b> "
+                                    <span style="color:#6e01eb;">S0:{
+                                        <span style="color:#eb1101;">
+                                        s00:{The given hypothesis and premise entail one another} because 
+                                        s01{the basis of one is included in the other.}}</span>
+                                    <span style="color:#6e01eb;">S1:{
+                                        The absolute fact stated in the hypothesis is that the man is wet.}</span> 
+                                    However, <b>exception</b> 
+                                    <span style="color:#6e01eb;">S2:{
+                                        <span style="color:#eb1101;">
+                                        s10:{If the man wears the anti-water T-shirt}</span> 
+                                        s11:{he also may not get wet.}}</span> " 
+                                        consists of rough steps including 
                                         <span style="color:#6e01eb;">S0</span>, 
                                         <span style="color:#eb1101;">S1</span> and 
-                                        <span style="color:#6e01eb;">S2</span>, each of which also is composed of detail step. 
+                                        <span style="color:#6e01eb;">S2</span>, each of which also is composed of detail steps. 
                                         Moreover, <span style="color:#6e01eb;">S2</span> is demonstrated as one exception step, which discusses the exception case.
                                     </li>
                                 <!-- <li>You may disagree with the <span class="concept_c">Answer</span>, but you should pretend it is correct when judging the <span class="concept_d">Explanations</span>.</li>
@@ -532,12 +557,24 @@
 
                 <!-- GOAL CAT START -->
 
-                <div id="question-1" class="question">
+                <!-- <div id="question-1" class="question">
                     <div class="question-header question-choice-container pl-5 mb-2 pt-2 pb-2 border-bottom">
 
                         <div style="border: 0px solid #000; padding: 10px 20px 10px 20px;">
                             <span class="concept_a">Question:</span> <b>${question}</b><br>
                             <span class="concept_c">Answer:</span> <b>${gold_label}</b><br>
+                        </div> -->
+                        <br>
+                        <div style="border: 5px solid #00aeef; padding: 10px 20px 10px 20px;"> Please read the instance that the statement explains and answer the following questions:</div>
+                        <br>
+                        <div style="border: 0px solid #000; padding: 10px 20px 10px 20px;">
+                            <!-- <span class="concept_b">Hypothesis:</span> <b>A person is at a diner, ordering an omelette.</b><br> -->
+                            <!-- <span class="concept_c">Relationship:</span> <b>false</b><br> -->
+                            <!-- <span class="concept_d">Explanation:</span> <b>one cannot be on a jumping horse while at a diner ordering food.</b> -->
+                            <span class="concept_a">Premise:</span> <b>${premise}</b><br>
+                            <span class="concept_b">Hypothesis:</span> <b>${hypothesis}</b><br>
+                            <span class="concept_c">Relationship:</span> <b>${gold_label}</b><br>            
+                            <!-- Relationship: ${gold_label} -->
                         </div>
 
 
